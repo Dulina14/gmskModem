@@ -1,0 +1,35 @@
+{
+	"version": "1.0",
+	"modules": {
+		"bd_0": {
+			"proto_instances": {
+				"/hls_inst/m_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "m_axis_TDATA[31:0]"},
+						"TKEEP": { "actual": "m_axis_TKEEP[3:0]"},
+						"TLAST": { "actual": "m_axis_TLAST[0:0]"},
+						"TREADY": { "actual": "m_axis_TREADY"},
+						"TSTRB": { "actual": "m_axis_TSTRB[3:0]"},
+						"TVALID": { "actual": "m_axis_TVALID"}
+					}
+				},
+				"/hls_inst/s_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"TDATA": { "actual": "s_axis_TDATA[31:0]"},
+						"TKEEP": { "actual": "s_axis_TKEEP[3:0]"},
+						"TLAST": { "actual": "s_axis_TLAST[0:0]"},
+						"TREADY": { "actual": "s_axis_TREADY"},
+						"TSTRB": { "actual": "s_axis_TSTRB[3:0]"},
+						"TVALID": { "actual": "s_axis_TVALID"}
+					}
+				}
+			}
+		}
+	}
+}

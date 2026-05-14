@@ -1,0 +1,42 @@
+{
+    "0": {
+        "name": "convEncoder_Seq",
+        "file": "convEncoder_Seq.cpp",
+        "fileloc": "18",
+        "instructions": "31",
+        "total_instructions": "77",
+        "calls": "1",
+        "basicblocks": "3",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "2",
+        "loads": {
+            "G": "1",
+            "L": "2"
+        },
+        "stores": {
+            "G": "1"
+        }
+    },
+    "1": {
+        "name": "convEncoder_Seq_Pipeline_VITIS_LOOP_40_1",
+        "file": "convEncoder_Seq.cpp",
+        "fileloc": "38",
+        "instructions": "46",
+        "total_instructions": "46",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "6",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "5"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

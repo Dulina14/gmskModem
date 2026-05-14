@@ -1,0 +1,511 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Project Report: Multi-Packet GMSK Communication System with CSV Interface}
+\author{}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+This report documents a complete MATLAB implementation of a GMSK (Gaussian Minimum Shift Keying) communication system supporting multi-packet transmission with AXI4-Stream CSV interface. The system implements a full digital communication pipeline including packet building, convolutional encoding, GMSK modulation, AWGN channel simulation, preamble detection, soft-decision Viterbi decoding, and CSV-based data input/output.
+
+The system is designed to transmit arbitrary-length data payloads across multiple packets, with each packet containing a 34-byte information payload encoded using a rate-1/2 convolutional code. The receiver performs correlation-based preamble detection to identify packet boundaries and recovers the transmitted data through soft-decision Viterbi decoding.
+
+\section{System Overview}
+
+\subsection{Architecture}
+The system follows a conventional digital communication architecture:
+
+\begin{figure}[h]
+\centering
+\begin{verbatim}
+CSV Input → Packet Builder → Conv Encoder → GMSK Modulator → Channel
+                                                                 ↓
+CSV Output ← Byte Conversion ← Viterbi Decoder ← Payload Extract ← Preamble Detect ← GMSK Demodulator
+\end{verbatim}
+\caption{System Block Diagram}
+\end{figure}
+
+\subsection{Key Features}
+\begin{itemize}
+    \item Support for arbitrary-length payload transmission via multi-packet aggregation
+    \item Rate-1/2 convolutional encoding with K=7 constraint length
+    \item Gaussian pulse shaping for spectral efficiency
+    \item Soft-decision Viterbi decoding for improved error correction
+    \item Correlation-based preamble detection for packet synchronization
+    \item AXI4-Stream CSV format for data input/output
+    \item Comprehensive diagnostic plots and error metrics
+\end{itemize}
+
+\section{Packet Structure}
+
+The Waveform class (waveformId=0) defines a fixed packet structure optimized for robust communication:
+
+\subsection{Packet Composition}
+Each packet contains the following fields:
+
+\begin{longtable}{|c|c|p{8cm}|}
+\hline
+\textbf{Field} & \textbf{Length (bits)} & \textbf{Description} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Field} & \textbf{Length (bits)} & \textbf{Description} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+Preamble & 48 & Known synchronization sequence for detection \\
+\hline
+Payload Chunk 1 & 136 & First quarter of encoded payload (136 bits) \\
+\hline
+Training Sequence 1 & 8 & First quarter of training sequence \\
+\hline
+Payload Chunk 2 & 136 & Second quarter of encoded payload \\
+\hline
+Training Sequence 2 & 8 & Second quarter of training sequence \\
+\hline
+Payload Chunk 3 & 136 & Third quarter of encoded payload \\
+\hline
+Training Sequence 3 & 8 & Third quarter of training sequence \\
+\hline
+Payload Chunk 4 & 136 & Fourth quarter of encoded payload \\
+\hline
+Training Sequence 4 & 8 & Fourth quarter of training sequence \\
+\hline
+\textbf{Total Burst} & \textbf{624} & Complete packet length \\
+\hline
+\end{longtable}
+
+\subsection{Payload Parameters}
+\begin{itemize}
+    \item Information payload: 34 bytes (272 bits)
+    \item Encoded payload: 544 bits (rate 1/2 convolutional coding)
+    \item Preamble: 48 bits (pseudo-random sequence for correlation detection)
+    \item Training sequences: 32 bits total (8 bits $\times$ 4, interleaved)
+    \item Total burst: 624 bits
+\end{itemize}
+
+The interleaved structure places training sequences between payload chunks to assist with channel estimation and provide known reference points within the burst.
+
+\section{Transmitter Components}
+
+\subsection{Waveform Class (\texttt{Waveform.m})}
+The Waveform class defines the packet structure parameters:
+\begin{itemize}
+    \item \texttt{waveformId}: Identifies the waveform configuration (0 for FEC rate 1/2)
+    \item \texttt{pldLenInfBytes}: Information payload length in bytes (34)
+    \item \texttt{pldLenEncBits}: Encoded payload length in bits (544)
+    \item \texttt{prmbSeqLen}: Preamble sequence length (48 bits)
+    \item \texttt{trngSeqLen}: Training sequence length (32 bits)
+    \item \texttt{burstBlockLen}: Total burst length (624 bits)
+\end{itemize}
+
+The class generates reproducible preamble and training sequences using a fixed random seed (12345) for consistency between transmission and reception.
+
+\subsection{Convolutional Encoder (\texttt{convEncoder.m})}
+The convolutional encoder implements a rate-1/2 code with K=7 constraint length:
+\begin{itemize}
+    \item Generator polynomials: [171 133] (octal)
+    \item Constraint length: K = 7
+    \item Code rate: 1/2
+    \item Input: 272 information bits
+    \item Output: 544 encoded bits
+\end{itemize}
+
+The encoder uses a shift register implementation where each input bit produces two output bits by computing the parity of specific tap combinations.
+
+\subsection{Gaussian Filter (\texttt{GaussianFilter.m})}
+The Gaussian filter performs pulse shaping to limit spectral occupancy:
+\begin{itemize}
+    \item BT product: 0.35 (typical for GMSK)
+    \item Samples per symbol (SPS): 4
+    \item Filter span: 8 symbols
+\end{itemize}
+
+The Gaussian filter shape is characterized by the BT (bandwidth-time) product, which determines the tradeoff between spectral efficiency and intersymbol interference.
+
+\subsection{GMSK Mapper (\texttt{GmskMapper.m})}
+The GMSK mapper converts filtered bits to complex baseband signals:
+\begin{itemize}
+    \item LUT size: 512 entries
+    \item Accumulator bits: 16
+    \item Bit gain reduction: 8
+    \item Quantization: Q15 format
+\end{itemize}
+
+The mapper implements phase accumulation where each bit advances the carrier phase by $\pi/2$ radians, producing the characteristic GMSK constant-envelope signal.
+
+\section{Receiver Components}
+
+\subsection{RxDemodulator (\texttt{RxDemodulator.m})}
+The receiver demodulator converts the received complex signal to soft metrics:
+\begin{itemize}
+    \item Samples per symbol: 4 (must match transmitter)
+    \item Gaussian filter span: 8 symbols
+    \item Output: Log-likelihood ratios (LLRs) for each bit
+\end{itemize}
+
+The demodulator applies matched filtering and samples at symbol intervals, accounting for the group delay introduced by the transmitter filter.
+
+\subsection{GMSK Demapper (\texttt{GmskDemapper.m})}
+The demapper extracts phase information from the received signal:
+\begin{itemize}
+    \item Computes phase difference between consecutive samples
+    \item Unwraps phase to recover continuous phase trajectory
+    \item Outputs soft metrics proportional to bit reliability
+\end{itemize}
+
+Phase-based demodulation is optimal for GMSK since the information is encoded in phase changes.
+
+\subsection{Viterbi Decoder (\texttt{ViterbiDecoder.m})}
+The Viterbi decoder performs soft-decision convolutional decoding:
+\begin{itemize}
+    \item Constraint length: K = 7
+    \item Generator polynomials: [171 133] octal
+    \item Traceback length: 35
+    \item Input type: Soft LLR
+    \item Soft bit width: 3 bits
+    \item Mode: Truncated
+\end{itemize}
+
+The decoder converts LLRs to soft metrics using the convention that metric 0 indicates strong '0' and metric $2^N-1$ indicates strong '1'.
+
+Key parameters:
+\begin{itemize}
+    \item \texttt{nVar}: Noise variance for LLR scaling
+    \item \texttt{llrClip}: LLR clipping range (default 127)
+    \item \texttt{tracebackLen}: Number of trellis steps to trace back
+\end{itemize}
+
+\section{Packet Detection and Processing}
+
+\subsection{Preamble Detection (\texttt{detect\_preamble.m})}
+The preamble detector uses normalized cross-correlation:
+\begin{enumerate}
+    \item Compute correlation between received LLR stream and known preamble sequence
+    \item Normalize correlation by preamble length
+    \item Apply threshold (typically 0.6) to identify peaks
+    \item Apply non-maximum suppression with minimum spacing (e.g., 500 bits)
+    \item Return ordered list of detections with indices and correlation values
+\end{enumerate}
+
+The detection threshold controls the tradeoff between sensitivity and false alarm rate. Lower thresholds detect more packets but may produce false positives.
+
+\subsection{Packet Building (\texttt{build\_packet.m})}
+The packet builder constructs complete bursts:
+\begin{enumerate}
+    \item Convert payload bytes to bits (MSB-first)
+    \item Apply convolutional encoding (272 $\rightarrow$ 544 bits)
+    \item Insert preamble at the start
+    \item Interleave payload chunks with training sequences
+    \item Output complete 624-bit burst
+\end{enumerate}
+
+The interleaved structure ensures training sequences are distributed throughout the packet for robust channel estimation.
+
+\subsection{Payload Extraction (\texttt{extract\_payload.m})}
+The payload extractor removes overhead:
+\begin{enumerate}
+    \item Skip preamble bits
+    \item Extract 4 payload chunks, discarding training sequences
+    \item Concatenate chunks into continuous encoded payload
+    \item Output 544 encoded bits
+\end{enumerate}
+
+\section{Multi-Packet Processing}
+
+The system supports transmission of arbitrary-length data by splitting across multiple packets.
+
+\subsection{Multi-Packet Builder (\texttt{build\_multipacket.m})}
+\begin{enumerate}
+    \item Read all input bytes from CSV
+    \item Split into 34-byte chunks (last chunk may be padded)
+    \item Build each packet using \texttt{build\_packet}
+    \item Insert configurable guard bits between packets
+    \item Return concatenated bitstream with packet metadata
+\end{enumerate}
+
+Default guard bits: 100 bits between packets to ensure separation.
+
+\subsection{Multi-Packet Reception (\texttt{receive\_multipacket.m})}
+\begin{enumerate}
+    \item For each detection from preamble detector:
+    \begin{itemize}
+        \item Extract burst from LLR stream
+        \item Remove preamble and training sequences
+        \item Apply Viterbi decoding
+        \item Convert bits to bytes
+    \end{itemize}
+    \item Concatenate all recovered packet bytes
+    \item Trim padding from final packet
+    \item Return aggregate bytes with per-packet status
+\end{enumerate}
+
+The receiver handles partial packet failures gracefully, continuing to process detected packets even if some fail.
+
+\section{CSV Interface}
+
+The system uses AXI4-Stream format for CSV input/output:
+
+\subsection{Input Format (\texttt{read\_axi\_stream\_csv.m})}
+\begin{verbatim}
+TDATA,TKEEP,TLAST
+9B553F84,f,0
+0789DC7F,f,0
+CA04CA04,3,1
+\end{verbatim}
+
+\begin{itemize}
+    \item TDATA: 32-bit word in hexadecimal (8 hex digits)
+    \item TKEEP: Byte enable mask (f = all 4 bytes valid, 3 = upper 2 bytes)
+    \item TLAST: End of frame flag (1 on last word)
+\end{itemize}
+
+Byte ordering: TDATA stores bytes in big-endian format [B3 B2 B1 B0] where B3 is MSB.
+
+\subsection{Output Format (\texttt{write\_axi\_stream\_csv.m})}
+Same format as input, with decoded bytes written in TDATA field.
+
+\section{Test Scripts and Validation}
+
+\subsection{Single-Packet Test (\texttt{test\_complete\_system.m})}
+Tests end-to-end transmission of a single 34-byte packet:
+\begin{itemize}
+    \item Eb/N0: 10 dB
+    \item SPS: 4
+    \item BT: 0.35
+    \item Preamble threshold: 0.65
+    \item Generates 9 diagnostic plots including constellation, correlation, and error analysis
+\end{itemize}
+
+Output metrics:
+\begin{itemize}
+    \item Byte Error Rate (BER)
+    \item Bit Error Rate
+    \item Error locations
+    \item Transmitted vs received byte comparison
+\end{itemize}
+
+\subsection{Multi-Packet Test (\texttt{test\_multipacket\_system.m})}
+Tests continuous multi-packet transmission:
+\begin{itemize}
+    \item Eb/N0: 30 dB
+    \item SPS: 4
+    \item BT: 0.35
+    \item Preamble threshold: 0.6
+    \item Guard bits: 100
+    \item Minimum packet spacing: 500 bits
+    \item Generates 12 diagnostic plots
+\end{itemize}
+
+Output metrics:
+\begin{itemize}
+    \item Number of transmitted/detected/recovered packets
+    \item Packet success rate
+    \item Byte Error Rate
+    \item Bit Error Rate
+    \item Per-packet status
+    \item Detection timeline
+\end{itemize}
+
+\subsection{Simple Example (\texttt{simple\_multipacket\_example.m})}
+Lightweight demonstration script for quick testing.
+
+\section{Performance Parameters}
+
+\subsection{System Parameters}
+\begin{longtable}{|c|c|p{8cm}|}
+\hline
+\textbf{Parameter} & \textbf{Typical Value} & \textbf{Description} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Parameter} & \textbf{Typical Value} & \textbf{Description} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+Eb/N0 & 10-30 dB & Energy per bit to noise spectral density \\
+\hline
+SPS & 4 & Samples per symbol \\
+\hline
+BT & 0.35 & Gaussian filter bandwidth-time product \\
+\hline
+Preamable Threshold & 0.6-0.65 & Correlation detection threshold \\
+\hline
+Guard Bits & 100 & Bits between packets in multi-packet mode \\
+\hline
+Min Packet Spacing & 500 bits & Minimum detection spacing for NMS \\
+\hline
+\end{longtable}
+
+\subsection{Expected Performance}
+\begin{longtable}{|c|c|c|}
+\hline
+\textbf{Eb/N0 (dB)} & \textbf{Expected BER} & \textbf{Comments} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Eb/N0 (dB)} & \textbf{Expected BER} & \textbf{Comments} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+3 & ~0.05-0.1 & Marginal performance \\
+\hline
+10 & ~0.001-0.01 & Usable for most applications \\
+\hline
+30 & ~0.0001 & Excellent performance, near error-free \\
+\hline
+\end{longtable}
+
+\section{File Inventory}
+
+\subsection{Core Communication Blocks}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{File} & \textbf{Description} \\
+\hline
+\endfirsthead
+\hline
+\textbf{File} & \textbf{Description} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\texttt{convEncoder.m} & Rate 1/2 convolutional encoder (K=7) \\
+\hline
+\texttt{ViterbiDecoder.m} & Soft-decision Viterbi decoder \\
+\hline
+\texttt{GaussianFilter.m} & Gaussian pulse shaping filter \\
+\hline
+\texttt{GmskMapper.m} & GMSK modulator with LUT \\
+\hline
+\texttt{GmskDemapper.m} & Phase detection and unwrapping \\
+\hline
+\texttt{RxDemodulator.m} & Complete demodulator with LLR output \\
+\hline
+\end{longtable}
+
+\subsection{Packet Processing}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{File} & \textbf{Description} \\
+\hline
+\endfirsthead
+\hline
+\textbf{File} & \textbf{Description} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\texttt{Waveform.m} & Defines packet structure parameters \\
+\hline
+\texttt{build\_packet.m} & Constructs single packet from payload \\
+\hline
+\texttt{build\_multipacket.m} & Builds multi-packet transmission stream \\
+\hline
+\texttt{extract\_payload.m} & Extracts payload from received burst \\
+\hline
+\texttt{detect\_preamble.m} & Correlation-based preamble detection \\
+\hline
+\texttt{receive\_multipacket.m} & Processes multiple detected packets \\
+\hline
+\end{longtable}
+
+\subsection{CSV Interface}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{File} & \textbf{Description} \\
+\hline
+\endfirsthead
+\hline
+\textbf{File} & \textbf{Description} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\texttt{read\_axi\_stream\_csv.m} & Reads AXI4-Stream format CSV \\
+\hline
+\texttt{write\_axi\_stream\_csv.m} & Writes AXI4-Stream format CSV \\
+\hline
+\end{longtable}
+
+\subsection{Test Scripts}
+\begin{longtable}{|p{4cm}|p{10cm}|}
+\hline
+\textbf{File} & \textbf{Description} \\
+\hline
+\endfirsthead
+\hline
+\textbf{File} & \textbf{Description} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\texttt{test\_complete\_system.m} & Single-packet end-to-end test \\
+\hline
+\texttt{test\_multipacket\_system.m} & Multi-packet end-to-end test \\
+\hline
+\texttt{simple\_multipacket\_example.m} & Lightweight demonstration \\
+\hline
+\texttt{compare\_multipacket\_results.m} & Diagnostic visualization utility \\
+\hline
+\end{longtable}
+
+\section{Usage Example}
+
+\subsection{Running the System}
+\begin{verbatim}
+% Single packet test
+test_complete_system
+
+% Multi-packet test
+test_multipacket_system
+\end{verbatim}
+
+These scripts will:
+\begin{enumerate}
+    \item Read input data from CSV (tx\_data.csv or tx\_multipacket\_data.csv)
+    \item Build and modulate packets
+    \item Add AWGN channel noise
+    \item Demodulate and detect preambles
+    \item Decode payloads with Viterbi algorithm
+    \item Write recovered data to output CSV
+    \item Display diagnostic plots and error statistics
+\end{enumerate}
+
+\section{Conclusion}
+
+This project implements a complete GMSK communication system with robust error correction through convolutional coding and Viterbi decoding. The multi-packet support enables transmission of arbitrary-length data streams, while the CSV interface provides simple integration with external systems using the AXI4-Stream standard.
+
+Key achievements:
+\begin{itemize}
+    \item Complete transmitter and receiver chain implementation
+    \item Support for arbitrary-length payload transmission
+    \item Comprehensive diagnostic and visualization tools
+    \item AXI4-Stream CSV format for easy data input/output
+    \item Configurable parameters for different operating conditions
+\end{itemize}
+
+The system demonstrates reliable communication at moderate to high SNR levels and provides a solid foundation for further development such as higher-order modulation, channel estimation improvements, or hardware implementation.
+
+\end{document}

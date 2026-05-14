@@ -1,0 +1,103 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir D:/Vitis_HLS/gmskModem/convEncoder/convEncoder 
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'D:/Vitis_HLS/gmskModem/convEncoder/convEncoder'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+WARNING: [HLS 200-2001] file not found 'convEncoder.cpp' see [hls] from hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying config ini 'syn.file=convEncoder.cpp' from hls_config.cfg(10)
+WARNING: [HLS 200-40] Cannot find design file 'convEncoder.cpp'
+INFO: [HLS 200-1465] Applying config ini 'syn.file=convEncoder_Seq.cpp' from hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'D:/Vitis_HLS/gmskModem/convEncoder/convEncoder_Seq.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=convEncoder_Seq_tb.cpp' from hls_config.cfg(12)
+INFO: [HLS 200-10] Adding test bench file 'D:/Vitis_HLS/gmskModem/convEncoder/convEncoder_Seq_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=convEncoder_Seq' from hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xcku5p-ffvb676-2-e' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xcku5p-ffvb676-2-e'
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying config ini 'sim.ldflags=-Wno-macro-redefined' from hls_config.cfg(9)
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/vitis-comp.json
+WARNING: [HLS 200-40] Cannot find source file convEncoder.cpp; skipping it.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 2 seconds. Elapsed time: 5.285 seconds; current allocated memory: 144.430 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'convEncoder_Seq.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.614 seconds; current allocated memory: 147.094 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 1,983 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 982 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 838 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 800 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 735 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 735 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 735 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 735 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 735 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 840 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 838 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 798 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 753 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 753 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 696 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 656 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function 'encode(ap_uint<1>, ap_uint<6>&)' into 'convEncoder_Seq(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)' (convEncoder_Seq.cpp:58:35)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_51_1' is marked as complete unroll implied by the pipeline pragma (convEncoder_Seq.cpp:51:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_51_1' (convEncoder_Seq.cpp:51:26) in function 'convEncoder_Seq' completely with a factor of 32 (convEncoder_Seq.cpp:37:0)
+INFO: [HLS 214-178] Inlining function 'hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>::axis()' into 'convEncoder_Seq(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)' (convEncoder_Seq.cpp:37:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.265 seconds; current allocated memory: 148.871 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 148.871 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.116 seconds; current allocated memory: 153.719 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.051 seconds; current allocated memory: 155.605 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'convEncoder_Seq' (convEncoder_Seq.cpp:19:1)...12 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.152 seconds; current allocated memory: 178.035 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 178.039 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'convEncoder_Seq' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'convEncoder_Seq' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'convEncoder_Seq'.
+WARNING: [HLS 200-880] The II Violation in module 'convEncoder_Seq' (function 'convEncoder_Seq'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between axis write operation ('m_axis_V_data_V_write_ln77', convEncoder_Seq.cpp:77) on port 'm_axis_V_data_V' (convEncoder_Seq.cpp:77) and axis write operation ('m_axis_V_data_V_write_ln69', convEncoder_Seq.cpp:69) on port 'm_axis_V_data_V' (convEncoder_Seq.cpp:69).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 4, function 'convEncoder_Seq'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.367 seconds; current allocated memory: 178.039 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 178.172 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convEncoder_Seq' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convEncoder_Seq/s_axis_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'convEncoder_Seq/s_axis_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'convEncoder_Seq/s_axis_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'convEncoder_Seq/s_axis_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'convEncoder_Seq/m_axis_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'convEncoder_Seq/m_axis_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'convEncoder_Seq/m_axis_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'convEncoder_Seq/m_axis_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'convEncoder_Seq' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'state' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'convEncoder_Seq' pipeline 'convEncoder_Seq' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convEncoder_Seq'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.196 seconds; current allocated memory: 181.488 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.589 seconds; current allocated memory: 190.102 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.775 seconds; current allocated memory: 194.691 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for convEncoder_Seq.
+INFO: [VLOG 209-307] Generating Verilog RTL for convEncoder_Seq.
+INFO: [HLS 200-789] **** Estimated Fmax: 877.19 MHz
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 2 seconds. Total elapsed time: 24.636 seconds; peak allocated memory: 194.770 MB.
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 29s

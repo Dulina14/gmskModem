@@ -1,0 +1,53 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:149:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="get_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:154:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="set_data" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:255:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="keep_all" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:372:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="empty" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:380:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="full" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:389:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:400:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:412:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:423:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="read_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h:440:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="write_nb" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="convEncoder_Seq.cpp:9:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="encode" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="directive:1:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="convEncoder_Seq" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=convEncoder_Seq" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="convEncoder_Seq.cpp:22:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="convEncoder_Seq" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=s_axis register_mode=off" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="convEncoder_Seq.cpp:23:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="convEncoder_Seq" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=m_axis register_mode=off" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="convEncoder_Seq.cpp:43:35" msg_body="Inlining function 'encode(ap_uint&lt;1&gt;, ap_uint&lt;6&gt;&amp;)' into 'convEncoder_Seq(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;)'">
+        <args Callee="encode(ap_uint&lt;1&gt;, ap_uint&lt;6&gt;&amp;)" Callee-DebugLoc="File convEncoder_Seq.cpp Line 8 Column 0" Caller="convEncoder_Seq(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;)" Caller-DebugLoc="File convEncoder_Seq.cpp Line 21 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="convEncoder_Seq.cpp:21:0" msg_body="Inlining function 'hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;::axis()' into 'convEncoder_Seq(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;)'">
+        <args Callee="hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;::axis()" Callee-DebugLoc="File {C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h} Line 217 Column 0" Caller="convEncoder_Seq(hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;, hls::stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 0ul, 0ul, 0ul, (unsigned char)56, false&gt;, 0&gt;&amp;)" Caller-DebugLoc="File convEncoder_Seq.cpp Line 21 Column 0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="convEncoder_Seq.cpp:40:26" msg_body="pipeline   1 convEncoder_Seq config_compile -pipeline_loops 64VITIS_LOOP_40_1 convEncoder_Seq.cpp:40:26">
+        <args LoopLoc="convEncoder_Seq.cpp:40:26" LoopLoc-DebugLoc="File convEncoder_Seq.cpp Line 40 Column 26" LoopName="VITIS_LOOP_40_1" PragmaFunction="convEncoder_Seq" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+</xilinx:hls_fe_msgs>

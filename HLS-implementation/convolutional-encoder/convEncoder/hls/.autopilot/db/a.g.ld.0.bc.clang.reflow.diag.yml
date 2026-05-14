@@ -1,0 +1,111 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        _ZN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb0EEELi0EE4readEv
+Args:            
+  - Callee:          'hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>::axis()'
+    DebugLoc:        { File: 'C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h', 
+                       Line: 217, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>::read()'
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: convEncoder_Seq.cpp, Line: 54, Column: 17 }
+Function:        _Z15convEncoder_SeqRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_
+Args:            
+  - Callee:          'hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>::axis()'
+    DebugLoc:        { File: 'C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h', 
+                       Line: 217, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'convEncoder_Seq(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: convEncoder_Seq.cpp, Line: 21, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: convEncoder_Seq.cpp, Line: 43, Column: 35 }
+Function:        _Z15convEncoder_SeqRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'encode(ap_uint<1>, ap_uint<6>&)'
+    DebugLoc:        { File: convEncoder_Seq.cpp, Line: 8, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'convEncoder_Seq(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: convEncoder_Seq.cpp, Line: 21, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: convEncoder_Seq.cpp, Line: 35, Column: 34 }
+Function:        _Z15convEncoder_SeqRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_
+Args:            
+  - Callee:          'hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>::axis()'
+    DebugLoc:        { File: 'C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h', 
+                       Line: 217, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'convEncoder_Seq(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: convEncoder_Seq.cpp, Line: 21, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_convEncoder_Seq_ir
+Args:            
+  - Callee:          'convEncoder_Seq(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: convEncoder_Seq.cpp, Line: 21, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_convEncoder_Seq_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: convEncoder_Seq.cpp, Line: 21, Column: 0 }
+Function:        _Z15convEncoder_SeqRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>::axis()'
+    DebugLoc:        { File: 'C:/AMDDesignTools/2025.2/Vitis/common/technology/autopilot\ap_axi_sdata.h', 
+                       Line: 217, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'convEncoder_Seq(hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: convEncoder_Seq.cpp, Line: 21, Column: 0 }
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_40_1
+  - String:          '> at '
+  - LoopLoc:         'convEncoder_Seq.cpp:40:26'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: convEncoder_Seq.cpp, Line: 40, Column: 26 }
+Function:        _Z15convEncoder_SeqRN3hls6streamINS_4axisI7ap_uintILi32EELm0ELm0ELm0ELh56ELb0EEELi0EEES6_
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  convEncoder_Seq
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_40_1
+  - String:          ' '
+  - LoopLoc:         'convEncoder_Seq.cpp:40:26'
+    DebugLoc:        { File: convEncoder_Seq.cpp, Line: 40, Column: 26 }
+  - String:          ' '
+...

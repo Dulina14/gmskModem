@@ -1,0 +1,694 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Apr 30 15:10:18 2026
+# Process ID         : 19076
+# Current directory  : D:/vivado/throughput_zybo/throughput_zybo.runs/synth_1
+# Command line       : vivado.exe -log throughput_bench_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source throughput_bench_top.tcl
+# Log file           : D:/vivado/throughput_zybo/throughput_zybo.runs/synth_1/throughput_bench_top.vds
+# Journal file       : D:/vivado/throughput_zybo/throughput_zybo.runs/synth_1\vivado.jou
+# Running On         : Manjula
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+# CPU Frequency      : 1690 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16893 MB
+# Swap memory        : 14495 MB
+# Total Virtual      : 31388 MB
+# Available Virtual  : 12112 MB
+#-----------------------------------------------------------
+source throughput_bench_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 545.938 ; gain = 221.676
+Command: read_checkpoint -auto_incremental -incremental D:/vivado/throughput_zybo/throughput_zybo.srcs/utils_1/imports/synth_1/throughput_bench_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/vivado/throughput_zybo/throughput_zybo.srcs/utils_1/imports/synth_1/throughput_bench_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top throughput_bench_top -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7784
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1309.148 ; gain = 542.566
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'throughput_bench_top' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/throughput_bench_top.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'lfsr32' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/lfsr32.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'lfsr32' (0#1) [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/lfsr32.sv:17]
+INFO: [Synth 8-6157] synthesizing module 'convEncoder_Seq' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/convEncoder_Seq.v:9]
+INFO: [Synth 8-6157] synthesizing module 'convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'convEncoder_Seq_bitselect_1ns_32ns_5ns_1_1_1' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/convEncoder_Seq_bitselect_1ns_32ns_5ns_1_1_1.v:8]
+	Parameter ADDRWIDTH bound to: 5 - type: integer 
+	Parameter DATAWIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/convEncoder_Seq_bitselect_1ns_32ns_5ns_1_1_1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'convEncoder_Seq_bitselect_1ns_32ns_5ns_1_1_1' (0#1) [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/convEncoder_Seq_bitselect_1ns_32ns_5ns_1_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'convEncoder_Seq_partset_64ns_64ns_2ns_6ns_64_1_1' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/convEncoder_Seq_partset_64ns_64ns_2ns_6ns_64_1_1.v:8]
+	Parameter ADDRWIDTH bound to: 6 - type: integer 
+	Parameter DATAWIDTH bound to: 64 - type: integer 
+	Parameter DATA1WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'convEncoder_Seq_partset_64ns_64ns_2ns_6ns_64_1_1' (0#1) [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/convEncoder_Seq_partset_64ns_64ns_2ns_6ns_64_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'convEncoder_Seq_flow_control_loop_pipe_sequential_init' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/convEncoder_Seq_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'convEncoder_Seq_flow_control_loop_pipe_sequential_init' (0#1) [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/convEncoder_Seq_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1' (0#1) [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'convEncoder_Seq' (0#1) [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/convEncoder_Seq.v:9]
+WARNING: [Synth 8-7071] port 'ap_done' of module 'convEncoder_Seq' is unconnected for instance 'u_encoder' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/throughput_bench_top.sv:133]
+WARNING: [Synth 8-7071] port 'ap_idle' of module 'convEncoder_Seq' is unconnected for instance 'u_encoder' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/throughput_bench_top.sv:133]
+WARNING: [Synth 8-7071] port 'ap_ready' of module 'convEncoder_Seq' is unconnected for instance 'u_encoder' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/throughput_bench_top.sv:133]
+WARNING: [Synth 8-7023] instance 'u_encoder' of module 'convEncoder_Seq' has 18 connections declared, but only 15 given [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/throughput_bench_top.sv:133]
+INFO: [Synth 8-6157] synthesizing module 'viterbi_decoder' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder.v:9]
+INFO: [Synth 8-6157] synthesizing module 'viterbi_decoder_survivor_RAM_AUTO_1R1W' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_survivor_RAM_AUTO_1R1W.v:7]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter AddressWidth bound to: 5 - type: integer 
+	Parameter AddressRange bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'viterbi_decoder_survivor_RAM_AUTO_1R1W' (0#1) [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_survivor_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'viterbi_decoder_viterbi_decoder_Pipeline_TRELLIS' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_viterbi_decoder_Pipeline_TRELLIS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'viterbi_decoder_sparsemux_33_4_2_1_1' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_sparsemux_33_4_2_1_1.v:8]
+	Parameter din0_WIDTH bound to: 2 - type: integer 
+	Parameter din1_WIDTH bound to: 2 - type: integer 
+	Parameter din2_WIDTH bound to: 2 - type: integer 
+	Parameter din3_WIDTH bound to: 2 - type: integer 
+	Parameter din4_WIDTH bound to: 2 - type: integer 
+	Parameter din5_WIDTH bound to: 2 - type: integer 
+	Parameter din6_WIDTH bound to: 2 - type: integer 
+	Parameter din7_WIDTH bound to: 2 - type: integer 
+	Parameter din8_WIDTH bound to: 2 - type: integer 
+	Parameter din9_WIDTH bound to: 2 - type: integer 
+	Parameter din10_WIDTH bound to: 2 - type: integer 
+	Parameter din11_WIDTH bound to: 2 - type: integer 
+	Parameter din12_WIDTH bound to: 2 - type: integer 
+	Parameter din13_WIDTH bound to: 2 - type: integer 
+	Parameter din14_WIDTH bound to: 2 - type: integer 
+	Parameter din15_WIDTH bound to: 2 - type: integer 
+	Parameter def_WIDTH bound to: 2 - type: integer 
+	Parameter sel_WIDTH bound to: 4 - type: integer 
+	Parameter dout_WIDTH bound to: 2 - type: integer 
+	Parameter CASE0 bound to: 4'b0000 
+	Parameter CASE1 bound to: 4'b0001 
+	Parameter CASE2 bound to: 4'b0010 
+	Parameter CASE3 bound to: 4'b0011 
+	Parameter CASE4 bound to: 4'b0100 
+	Parameter CASE5 bound to: 4'b0101 
+	Parameter CASE6 bound to: 4'b0110 
+	Parameter CASE7 bound to: 4'b0111 
+	Parameter CASE8 bound to: 4'b1000 
+	Parameter CASE9 bound to: 4'b1001 
+	Parameter CASE10 bound to: 4'b1010 
+	Parameter CASE11 bound to: 4'b1011 
+	Parameter CASE12 bound to: 4'b1100 
+	Parameter CASE13 bound to: 4'b1101 
+	Parameter CASE14 bound to: 4'b1110 
+	Parameter CASE15 bound to: 4'b1111 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_sparsemux_33_4_2_1_1.v:126]
+INFO: [Synth 8-6155] done synthesizing module 'viterbi_decoder_sparsemux_33_4_2_1_1' (0#1) [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_sparsemux_33_4_2_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'viterbi_decoder_flow_control_loop_pipe_sequential_init' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'viterbi_decoder_flow_control_loop_pipe_sequential_init' (0#1) [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'viterbi_decoder_viterbi_decoder_Pipeline_TRELLIS' (0#1) [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_viterbi_decoder_Pipeline_TRELLIS.v:9]
+INFO: [Synth 8-6157] synthesizing module 'viterbi_decoder_viterbi_decoder_Pipeline_TRACEBACK' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_viterbi_decoder_Pipeline_TRACEBACK.v:9]
+INFO: [Synth 8-6157] synthesizing module 'viterbi_decoder_sparsemux_129_6_1_1_1' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_sparsemux_129_6_1_1_1.v:8]
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter din16_WIDTH bound to: 1 - type: integer 
+	Parameter din17_WIDTH bound to: 1 - type: integer 
+	Parameter din18_WIDTH bound to: 1 - type: integer 
+	Parameter din19_WIDTH bound to: 1 - type: integer 
+	Parameter din20_WIDTH bound to: 1 - type: integer 
+	Parameter din21_WIDTH bound to: 1 - type: integer 
+	Parameter din22_WIDTH bound to: 1 - type: integer 
+	Parameter din23_WIDTH bound to: 1 - type: integer 
+	Parameter din24_WIDTH bound to: 1 - type: integer 
+	Parameter din25_WIDTH bound to: 1 - type: integer 
+	Parameter din26_WIDTH bound to: 1 - type: integer 
+	Parameter din27_WIDTH bound to: 1 - type: integer 
+	Parameter din28_WIDTH bound to: 1 - type: integer 
+	Parameter din29_WIDTH bound to: 1 - type: integer 
+	Parameter din30_WIDTH bound to: 1 - type: integer 
+	Parameter din31_WIDTH bound to: 1 - type: integer 
+	Parameter din32_WIDTH bound to: 1 - type: integer 
+	Parameter din33_WIDTH bound to: 1 - type: integer 
+	Parameter din34_WIDTH bound to: 1 - type: integer 
+	Parameter din35_WIDTH bound to: 1 - type: integer 
+	Parameter din36_WIDTH bound to: 1 - type: integer 
+	Parameter din37_WIDTH bound to: 1 - type: integer 
+	Parameter din38_WIDTH bound to: 1 - type: integer 
+	Parameter din39_WIDTH bound to: 1 - type: integer 
+	Parameter din40_WIDTH bound to: 1 - type: integer 
+	Parameter din41_WIDTH bound to: 1 - type: integer 
+	Parameter din42_WIDTH bound to: 1 - type: integer 
+	Parameter din43_WIDTH bound to: 1 - type: integer 
+	Parameter din44_WIDTH bound to: 1 - type: integer 
+	Parameter din45_WIDTH bound to: 1 - type: integer 
+	Parameter din46_WIDTH bound to: 1 - type: integer 
+	Parameter din47_WIDTH bound to: 1 - type: integer 
+	Parameter din48_WIDTH bound to: 1 - type: integer 
+	Parameter din49_WIDTH bound to: 1 - type: integer 
+	Parameter din50_WIDTH bound to: 1 - type: integer 
+	Parameter din51_WIDTH bound to: 1 - type: integer 
+	Parameter din52_WIDTH bound to: 1 - type: integer 
+	Parameter din53_WIDTH bound to: 1 - type: integer 
+	Parameter din54_WIDTH bound to: 1 - type: integer 
+	Parameter din55_WIDTH bound to: 1 - type: integer 
+	Parameter din56_WIDTH bound to: 1 - type: integer 
+	Parameter din57_WIDTH bound to: 1 - type: integer 
+	Parameter din58_WIDTH bound to: 1 - type: integer 
+	Parameter din59_WIDTH bound to: 1 - type: integer 
+	Parameter din60_WIDTH bound to: 1 - type: integer 
+	Parameter din61_WIDTH bound to: 1 - type: integer 
+	Parameter din62_WIDTH bound to: 1 - type: integer 
+	Parameter din63_WIDTH bound to: 1 - type: integer 
+	Parameter def_WIDTH bound to: 1 - type: integer 
+	Parameter sel_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+	Parameter CASE0 bound to: 6'b000000 
+	Parameter CASE1 bound to: 6'b000001 
+	Parameter CASE2 bound to: 6'b000010 
+	Parameter CASE3 bound to: 6'b000011 
+	Parameter CASE4 bound to: 6'b000100 
+	Parameter CASE5 bound to: 6'b000101 
+	Parameter CASE6 bound to: 6'b000110 
+	Parameter CASE7 bound to: 6'b000111 
+	Parameter CASE8 bound to: 6'b001000 
+	Parameter CASE9 bound to: 6'b001001 
+	Parameter CASE10 bound to: 6'b001010 
+	Parameter CASE11 bound to: 6'b001011 
+	Parameter CASE12 bound to: 6'b001100 
+	Parameter CASE13 bound to: 6'b001101 
+	Parameter CASE14 bound to: 6'b001110 
+	Parameter CASE15 bound to: 6'b001111 
+	Parameter CASE16 bound to: 6'b010000 
+	Parameter CASE17 bound to: 6'b010001 
+	Parameter CASE18 bound to: 6'b010010 
+	Parameter CASE19 bound to: 6'b010011 
+	Parameter CASE20 bound to: 6'b010100 
+	Parameter CASE21 bound to: 6'b010101 
+	Parameter CASE22 bound to: 6'b010110 
+	Parameter CASE23 bound to: 6'b010111 
+	Parameter CASE24 bound to: 6'b011000 
+	Parameter CASE25 bound to: 6'b011001 
+	Parameter CASE26 bound to: 6'b011010 
+	Parameter CASE27 bound to: 6'b011011 
+	Parameter CASE28 bound to: 6'b011100 
+	Parameter CASE29 bound to: 6'b011101 
+	Parameter CASE30 bound to: 6'b011110 
+	Parameter CASE31 bound to: 6'b011111 
+	Parameter CASE32 bound to: 6'b100000 
+	Parameter CASE33 bound to: 6'b100001 
+	Parameter CASE34 bound to: 6'b100010 
+	Parameter CASE35 bound to: 6'b100011 
+	Parameter CASE36 bound to: 6'b100100 
+	Parameter CASE37 bound to: 6'b100101 
+	Parameter CASE38 bound to: 6'b100110 
+	Parameter CASE39 bound to: 6'b100111 
+	Parameter CASE40 bound to: 6'b101000 
+	Parameter CASE41 bound to: 6'b101001 
+	Parameter CASE42 bound to: 6'b101010 
+	Parameter CASE43 bound to: 6'b101011 
+	Parameter CASE44 bound to: 6'b101100 
+	Parameter CASE45 bound to: 6'b101101 
+	Parameter CASE46 bound to: 6'b101110 
+	Parameter CASE47 bound to: 6'b101111 
+	Parameter CASE48 bound to: 6'b110000 
+	Parameter CASE49 bound to: 6'b110001 
+	Parameter CASE50 bound to: 6'b110010 
+	Parameter CASE51 bound to: 6'b110011 
+	Parameter CASE52 bound to: 6'b110100 
+	Parameter CASE53 bound to: 6'b110101 
+	Parameter CASE54 bound to: 6'b110110 
+	Parameter CASE55 bound to: 6'b110111 
+	Parameter CASE56 bound to: 6'b111000 
+	Parameter CASE57 bound to: 6'b111001 
+	Parameter CASE58 bound to: 6'b111010 
+	Parameter CASE59 bound to: 6'b111011 
+	Parameter CASE60 bound to: 6'b111100 
+	Parameter CASE61 bound to: 6'b111101 
+	Parameter CASE62 bound to: 6'b111110 
+	Parameter CASE63 bound to: 6'b111111 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_sparsemux_129_6_1_1_1.v:414]
+INFO: [Synth 8-6155] done synthesizing module 'viterbi_decoder_sparsemux_129_6_1_1_1' (0#1) [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_sparsemux_129_6_1_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'viterbi_decoder_viterbi_decoder_Pipeline_TRACEBACK' (0#1) [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_viterbi_decoder_Pipeline_TRACEBACK.v:9]
+INFO: [Synth 8-6157] synthesizing module 'viterbi_decoder_regslice_both' [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_regslice_both.v:8]
+	Parameter DataWidth bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'viterbi_decoder_regslice_both' (0#1) [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'viterbi_decoder' (0#1) [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/viterbi_decoder.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'throughput_bench_top' (0#1) [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/throughput_bench_top.sv:1]
+INFO: [Synth 8-3936] Found unconnected internal register 'din_tmp_reg' and it is trimmed from '66' to '64' bits. [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/convEncoder_Seq_partset_64ns_64ns_2ns_6ns_64_1_1.v:28]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_lfsr'. This will prevent further optimization [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/throughput_bench_top.sv:77]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_encoder'. This will prevent further optimization [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/throughput_bench_top.sv:133]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_decoder'. This will prevent further optimization [D:/vivado/throughput_zybo/throughput_zybo.srcs/sources_1/new/throughput_bench_top.sv:160]
+WARNING: [Synth 8-7129] Port reset in module viterbi_decoder_survivor_RAM_AUTO_1R1W is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_TKEEP[3] in module convEncoder_Seq is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_TKEEP[2] in module convEncoder_Seq is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_TKEEP[1] in module convEncoder_Seq is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_TKEEP[0] in module convEncoder_Seq is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_TSTRB[3] in module convEncoder_Seq is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_TSTRB[2] in module convEncoder_Seq is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_TSTRB[1] in module convEncoder_Seq is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_TSTRB[0] in module convEncoder_Seq is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1481.012 ; gain = 714.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1481.012 ; gain = 714.430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1481.012 ; gain = 714.430
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 1481.012 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/vivado/throughput_zybo/throughput_zybo.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [D:/vivado/throughput_zybo/throughput_zybo.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vivado/throughput_zybo/throughput_zybo.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/throughput_bench_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/throughput_bench_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1544.219 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1544.219 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1544.219 ; gain = 777.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1544.219 ; gain = 777.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1544.219 ; gain = 777.637
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'viterbi_decoder_regslice_both'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'state_q_reg' in module 'throughput_bench_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+*
+                    ZERO |                               01 |                               10
+                     ONE |                               11 |                               11
+                     TWO |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'viterbi_decoder_regslice_both'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               ST_WARMUP |                               00 |                               00
+              ST_MEASURE |                               01 |                               01
+                 ST_DONE |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_q_reg' using encoding 'sequential' in module 'throughput_bench_top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1544.219 ; gain = 777.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 2     
+	   2 Input   33 Bit       Adders := 1     
+	   3 Input    9 Bit       Adders := 128   
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      2 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 67    
+	   4 Input      1 Bit         XORs := 2     
++---Registers : 
+	               64 Bit    Registers := 3     
+	               32 Bit    Registers := 7     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 74    
+	                6 Bit    Registers := 11    
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 19    
+	                1 Bit    Registers := 103   
++---RAMs : 
+	               32 Bit	(32 X 1 bit)          RAMs := 64    
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 3     
+	   4 Input   64 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 4     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   15 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 254   
+	   2 Input    6 Bit        Muxes := 3     
+	   3 Input    6 Bit        Muxes := 16    
+	   2 Input    5 Bit        Muxes := 66    
+	   3 Input    5 Bit        Muxes := 8     
+	   2 Input    4 Bit        Muxes := 3     
+	   3 Input    4 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 24    
+	   4 Input    2 Bit        Muxes := 9     
+	   3 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 95    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port s_axis_TKEEP[3] in module convEncoder_Seq is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_TKEEP[2] in module convEncoder_Seq is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_TKEEP[1] in module convEncoder_Seq is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_TKEEP[0] in module convEncoder_Seq is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_TSTRB[3] in module convEncoder_Seq is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_TSTRB[2] in module convEncoder_Seq is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_TSTRB[1] in module convEncoder_Seq is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_TSTRB[0] in module convEncoder_Seq is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1783.844 ; gain = 1017.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+-----------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object            | Inference | Size (Depth x Width) | Primitives    | 
++------------+-----------------------+-----------+----------------------+---------------+
+|u_decoder   | survivor_U/ram_reg    | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_1_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_2_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_3_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_4_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_5_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_6_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_7_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_8_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_9_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_10_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_11_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_12_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_13_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_14_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_15_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_16_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_17_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_18_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_19_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_20_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_21_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_22_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_23_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_24_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_25_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_26_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_27_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_28_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_29_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_30_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_31_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_32_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_33_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_34_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_35_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_36_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_37_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_38_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_39_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_40_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_41_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_42_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_43_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_44_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_45_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_46_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_47_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_48_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_49_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_50_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_51_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_52_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_53_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_54_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_55_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_56_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_57_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_58_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_59_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_60_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_61_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_62_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_63_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
++------------+-----------------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1783.844 ; gain = 1017.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1793.082 ; gain = 1026.500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+-----------------------+-----------+----------------------+---------------+
+|Module Name | RTL Object            | Inference | Size (Depth x Width) | Primitives    | 
++------------+-----------------------+-----------+----------------------+---------------+
+|u_decoder   | survivor_U/ram_reg    | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_1_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_2_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_3_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_4_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_5_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_6_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_7_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_8_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_9_U/ram_reg  | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_10_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_11_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_12_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_13_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_14_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_15_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_16_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_17_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_18_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_19_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_20_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_21_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_22_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_23_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_24_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_25_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_26_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_27_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_28_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_29_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_30_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_31_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_32_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_33_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_34_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_35_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_36_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_37_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_38_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_39_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_40_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_41_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_42_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_43_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_44_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_45_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_46_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_47_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_48_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_49_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_50_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_51_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_52_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_53_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_54_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_55_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_56_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_57_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_58_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_59_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_60_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_61_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_62_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
+|u_decoder   | survivor_63_U/ram_reg | Implied   | 32 x 1               | RAM32X1S x 1  | 
++------------+-----------------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1802.949 ; gain = 1036.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1956.898 ; gain = 1190.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1956.898 ; gain = 1190.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1956.898 ; gain = 1190.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1956.898 ; gain = 1190.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1956.898 ; gain = 1190.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1956.898 ; gain = 1190.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   170|
+|3     |LUT1     |     9|
+|4     |LUT2     |   128|
+|5     |LUT3     |   667|
+|6     |LUT4     |   666|
+|7     |LUT5     |  1698|
+|8     |LUT6     |  1557|
+|9     |MUXF7    |    13|
+|10    |MUXF8    |     6|
+|11    |RAM32X1S |    64|
+|12    |FDRE     |   738|
+|13    |FDSE     |   547|
+|14    |IBUF     |     2|
+|15    |OBUF     |     1|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1956.898 ; gain = 1190.316
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:46 . Memory (MB): peak = 1956.898 ; gain = 1127.109
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 1956.898 ; gain = 1190.316
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1962.926 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 253 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1970.629 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 64 instances were transformed.
+  RAM32X1S => RAM32X1S (RAMS32): 64 instances
+
+Synth Design complete | Checksum: c52d56b
+INFO: [Common 17-83] Releasing license: Synthesis
+68 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1970.629 ; gain = 1414.738
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1970.629 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/vivado/throughput_zybo/throughput_zybo.runs/synth_1/throughput_bench_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file throughput_bench_top_utilization_synth.rpt -pb throughput_bench_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 30 15:11:22 2026...

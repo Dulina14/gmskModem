@@ -1,0 +1,246 @@
+<ENTRY>
+{
+ "thisFile": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\convEncoder.hlscompile_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "03/18/26 16:04:16",
+ "timestampMillis": "1773830056930",
+ "buildStep": {
+  "cmdId": "49e5a674-1037-45f3-a958-c89849e6180e",
+  "name": "v++",
+  "logFile": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\logs\\convEncoder.steps.log",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config D:\\Vitis_HLS\\gmskModem\\convEncoder\\hls_config.cfg --work_dir convEncoder ",
+  "args": [
+   "-c",
+   "--mode",
+   "hls",
+   "--config",
+   "D:\\Vitis_HLS\\gmskModem\\convEncoder\\hls_config.cfg",
+   "--work_dir",
+   "convEncoder"
+  ],
+  "iniFiles": [
+   {
+    "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\hls_config.cfg",
+    "content": "part=xcku5p-ffvb676-2-e\n\n[hls]\nflow_target=vivado\npackage.output.format=ip_catalog\npackage.output.syn=false\nclock=10ns\nsyn.top=convEncoder_Seq\nsim.ldflags=-Wno-macro-redefined\nsyn.file=convEncoder.cpp\nsyn.file=convEncoder_Seq.cpp\ntb.file=convEncoder_Seq_tb.cpp"
+   }
+  ],
+  "cwd": "D:\\Vitis_HLS\\gmskModem\\convEncoder"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/18/26 16:04:16",
+ "timestampMillis": "1773830056930",
+ "status": {
+  "cmdId": "49e5a674-1037-45f3-a958-c89849e6180e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "03/18/26 16:04:20",
+ "timestampMillis": "1773830060688",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_COMPILE",
+  "target": "TT_HW",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "convEncoder_Seq",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder.cpp",
+     "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder_Seq.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "03/18/26 16:04:20",
+ "timestampMillis": "1773830060689",
+ "buildStep": {
+  "cmdId": "53e07f0c-7f37-4f19-8c12-c568086e0678",
+  "name": "",
+  "logFile": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "D:\\Vitis_HLS\\gmskModem\\convEncoder"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/18/26 16:04:20",
+ "timestampMillis": "1773830060690",
+ "status": {
+  "cmdId": "53e07f0c-7f37-4f19-8c12-c568086e0678",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:04:20",
+ "timestampMillis": "1773830060690",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls\\hls_data.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:04:20",
+ "timestampMillis": "1773830060690",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls\\syn\\report\\csynth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:04:20",
+ "timestampMillis": "1773830060691",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls\\syn\\report\\csynth.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:04:41",
+ "timestampMillis": "1773830081178",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:04:41",
+ "timestampMillis": "1773830081179",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:04:41",
+ "timestampMillis": "1773830081179",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_SCHEDULE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/18/26 16:04:41",
+ "timestampMillis": "1773830081179",
+ "status": {
+  "cmdId": "53e07f0c-7f37-4f19-8c12-c568086e0678",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/18/26 16:04:41",
+ "timestampMillis": "1773830081281",
+ "status": {
+  "cmdId": "49e5a674-1037-45f3-a958-c89849e6180e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:04:41",
+ "timestampMillis": "1773830081300",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\reports\\v++_compile_convEncoder_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:04:41",
+ "timestampMillis": "1773830081300",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\reports\\.db\\v++_compile_convEncoder_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

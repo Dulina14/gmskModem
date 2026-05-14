@@ -1,0 +1,280 @@
+
+*** Running vivado
+    with args -log bd_0_hls_inst_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+
+!! WARNING !!
+"PYTHONPATH" variable is set greater than default max string limit of "519" characters.
+Please ignore this, if you have already made changes to your system registry to accept more than
+default limit of 519 characters.
+!! WARNING !!
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Mar 18 16:07:29 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source bd_0_hls_inst_0.tcl -notrace
+INFO: Dispatch client connection id - 62278
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 531.227 ; gain = 218.008
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2025.2/Vivado/data/ip'.
+Command: synth_design -top bd_0_hls_inst_0 -part xcku5p-ffvb676-2-e -directive sdx_optimization_effort_high -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku5p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku5p'
+INFO: [Device 21-403] Loading part xcku5p-ffvb676-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6524
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1932.055 ; gain = 250.113
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'convEncoder_Seq' [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/efbf/hdl/verilog/convEncoder_Seq.v:9]
+INFO: [Synth 8-6157] synthesizing module 'convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1' [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/efbf/hdl/verilog/convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'convEncoder_Seq_bitselect_1ns_32ns_5ns_1_1_1' [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/efbf/hdl/verilog/convEncoder_Seq_bitselect_1ns_32ns_5ns_1_1_1.v:8]
+INFO: [Synth 8-226] default block is never used [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/efbf/hdl/verilog/convEncoder_Seq_bitselect_1ns_32ns_5ns_1_1_1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'convEncoder_Seq_bitselect_1ns_32ns_5ns_1_1_1' (0#1) [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/efbf/hdl/verilog/convEncoder_Seq_bitselect_1ns_32ns_5ns_1_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'convEncoder_Seq_partset_64ns_64ns_2ns_6ns_64_1_1' [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/efbf/hdl/verilog/convEncoder_Seq_partset_64ns_64ns_2ns_6ns_64_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'convEncoder_Seq_partset_64ns_64ns_2ns_6ns_64_1_1' (0#1) [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/efbf/hdl/verilog/convEncoder_Seq_partset_64ns_64ns_2ns_6ns_64_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'convEncoder_Seq_flow_control_loop_pipe_sequential_init' [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/efbf/hdl/verilog/convEncoder_Seq_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'convEncoder_Seq_flow_control_loop_pipe_sequential_init' (0#1) [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/efbf/hdl/verilog/convEncoder_Seq_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1' (0#1) [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/efbf/hdl/verilog/convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'convEncoder_Seq' (0#1) [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/efbf/hdl/verilog/convEncoder_Seq.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (0#1) [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:53]
+INFO: [Synth 8-3936] Found unconnected internal register 'din_tmp_reg' and it is trimmed from '66' to '64' bits. [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ipshared/efbf/hdl/verilog/convEncoder_Seq_partset_64ns_64ns_2ns_6ns_64_1_1.v:28]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-7129] Port s_axis_TKEEP[3] in module convEncoder_Seq is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_TKEEP[2] in module convEncoder_Seq is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_TKEEP[1] in module convEncoder_Seq is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_TKEEP[0] in module convEncoder_Seq is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_TSTRB[3] in module convEncoder_Seq is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_TSTRB[2] in module convEncoder_Seq is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_TSTRB[1] in module convEncoder_Seq is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_TSTRB[0] in module convEncoder_Seq is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2056.996 ; gain = 375.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2056.996 ; gain = 375.055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2056.996 ; gain = 375.055
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2056.996 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/convEncoder_Seq_ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2149.691 ; gain = 0.129
+Finished Parsing XDC File [d:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.gen/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/convEncoder_Seq_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2149.691 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 2149.691 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 2149.691 ; gain = 467.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku5p-ffvb676-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 2149.691 ; gain = 467.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 2149.691 ; gain = 467.750
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 2149.691 ; gain = 467.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   33 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+	   4 Input      1 Bit         XORs := 2     
++---Registers : 
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1824 (col length:96)
+BRAMs: 960 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7129] Port s_axis_TKEEP[3] in module convEncoder_Seq is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_TKEEP[2] in module convEncoder_Seq is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_TKEEP[1] in module convEncoder_Seq is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_TKEEP[0] in module convEncoder_Seq is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_TSTRB[3] in module convEncoder_Seq is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_TSTRB[2] in module convEncoder_Seq is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_TSTRB[1] in module convEncoder_Seq is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_TSTRB[0] in module convEncoder_Seq is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 2149.691 ; gain = 467.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 2696.578 ; gain = 1014.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 2736.039 ; gain = 1054.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 2737.223 ; gain = 1055.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 2961.629 ; gain = 1279.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 2961.629 ; gain = 1279.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 2961.629 ; gain = 1279.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:50 . Memory (MB): peak = 2961.629 ; gain = 1279.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2961.629 ; gain = 1279.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2961.629 ; gain = 1279.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |     2|
+|2     |LUT2  |     9|
+|3     |LUT3  |     7|
+|4     |LUT4  |    10|
+|5     |LUT5  |    36|
+|6     |LUT6  |    81|
+|7     |MUXF7 |     1|
+|8     |FDRE  |   155|
+|9     |FDSE  |     1|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2961.629 ; gain = 1279.688
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:42 . Memory (MB): peak = 2961.629 ; gain = 1186.992
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2961.629 ; gain = 1279.688
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2961.629 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2961.629 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 44945efa
+INFO: [Common 17-83] Releasing license: Synthesis
+52 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:01:00 . Memory (MB): peak = 2961.629 ; gain = 2369.254
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2961.629 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_0_hls_inst_0, cache-ID = 87ff8a657fd34079
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2961.629 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 18 16:08:39 2026...

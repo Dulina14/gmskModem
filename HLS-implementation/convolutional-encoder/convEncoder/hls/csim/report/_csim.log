@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+   Compiling ../../../../convEncoder_tb.cpp in debug mode
+   Compiling ../../../../convEncoder.cpp in debug mode
+   Generating csim.exe
+Input bits: 1011001011
+Encode bits: -10-1000-100000-10-10-100-1
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 20
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

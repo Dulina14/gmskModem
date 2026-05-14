@@ -1,0 +1,72 @@
+========================================
+  Conv Encoder Testbench (K=7 [171 133])
+========================================
+
+[PASS] TC1: All-zero input
+  Word[0]  IN =0x00000000  OUT[lo]=0x00000000  OUT[hi]=0x00000000
+[PASS] TC2: All-ones input
+  Word[0]  IN =0xffffffff  OUT[lo]=0xfffff29b  OUT[hi]=0xffffffff
+[PASS] TC3: Impulse (bit 0 only)
+  Word[0]  IN =0x00000001  OUT[lo]=0x00003593  OUT[hi]=0x00000000
+[PASS] TC4: Single bit at MSB (bit 31)
+  Word[0]  IN =0x80000000  OUT[lo]=0x00000000  OUT[hi]=0xc0000000
+[PASS] TC5: Alternating bits 0xAAAAAAAA
+  Word[0]  IN =0xaaaaaaaa  OUT[lo]=0xcccccc21  OUT[hi]=0xcccccccc
+[PASS] TC6: Alternating bits 0x55555555
+  Word[0]  IN =0x55555555  OUT[lo]=0x33333e57  OUT[hi]=0x33333333
+[PASS] TC7: Known pattern 0xDEADBEEF
+  Word[0]  IN =0xdeadbeef  OUT[lo]=0xb730062f  OUT[hi]=0x18bf98ac
+[PASS] TC8: Multi-word state persistence (4 words)
+  Word[0]  IN =0x12345678  OUT[lo]=0xe8f66b47  OUT[hi]=0x1404a7c4
+  Word[1]  IN =0xabcdef01  OUT[lo]=0x059b38cf  OUT[hi]=0xf754371b
+  Word[2]  IN =0xdeadbeef  OUT[lo]=0xb7300b4b  OUT[hi]=0x18bf98ac
+  Word[3]  IN =0x00ff00ff  OUT[lo]=0x0d64ff1c  OUT[hi]=0x0d64f29b
+
+--- TC9: Walking ones (32 single-word tests) ---
+[PASS] TC9.0: Walking one at bit 0
+[PASS] TC9.1: Walking one at bit 1
+[PASS] TC9.2: Walking one at bit 2
+[PASS] TC9.3: Walking one at bit 3
+[PASS] TC9.4: Walking one at bit 4
+[PASS] TC9.5: Walking one at bit 5
+[PASS] TC9.6: Walking one at bit 6
+[PASS] TC9.7: Walking one at bit 7
+[PASS] TC9.8: Walking one at bit 8
+[PASS] TC9.9: Walking one at bit 9
+[PASS] TC9.10: Walking one at bit 10
+[PASS] TC9.11: Walking one at bit 11
+[PASS] TC9.12: Walking one at bit 12
+[PASS] TC9.13: Walking one at bit 13
+[PASS] TC9.14: Walking one at bit 14
+[PASS] TC9.15: Walking one at bit 15
+[PASS] TC9.16: Walking one at bit 16
+[PASS] TC9.17: Walking one at bit 17
+[PASS] TC9.18: Walking one at bit 18
+[PASS] TC9.19: Walking one at bit 19
+[PASS] TC9.20: Walking one at bit 20
+[PASS] TC9.21: Walking one at bit 21
+[PASS] TC9.22: Walking one at bit 22
+[PASS] TC9.23: Walking one at bit 23
+[PASS] TC9.24: Walking one at bit 24
+[PASS] TC9.25: Walking one at bit 25
+[PASS] TC9.26: Walking one at bit 26
+[PASS] TC9.27: Walking one at bit 27
+[PASS] TC9.28: Walking one at bit 28
+[PASS] TC9.29: Walking one at bit 29
+[PASS] TC9.30: Walking one at bit 30
+[PASS] TC9.31: Walking one at bit 31
+  All walking-one subtests passed.
+
+--- TC10: Pseudo-random patterns ---
+[PASS] TC10: 6-word pseudo-random
+  Word[0]  IN =0xc0ffee42  OUT[lo]=0x3ee39de1  OUT[hi]=0xbd64ffc7
+  Word[1]  IN =0x13370000  OUT[lo]=0x00000db2  OUT[hi]=0x2cf37f5b
+  Word[2]  IN =0xbaadf00d  OUT[lo]=0x9b0d8a7f  OUT[hi]=0x3bcf9b2e
+  Word[3]  IN =0x8badf00d  OUT[lo]=0x9b0d84af  OUT[hi]=0x28389b2e
+  Word[4]  IN =0xfacefeed  OUT[lo]=0xc730e874  OUT[hi]=0x48a3ec08
+  Word[5]  IN =0x0b00b135  OUT[lo]=0xd32f91e0  OUT[hi]=0xe6eb0ee6
+
+========================================
+  Results: 41 / 41 tests passed
+========================================
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 12

@@ -1,0 +1,405 @@
+  **** HLS Build v 6295257
+INFO: [HLS 200-2005] Using work_dir C:/Users/Public/Vitis_HLS/gmskModem/convEncoder/convEncoder 
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/Public/Vitis_HLS/gmskModem/convEncoder/convEncoder/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'C:/Users/Public/Vitis_HLS/gmskModem/convEncoder/convEncoder'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=.%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=convEncoder.cpp' from hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file 'C:/Users/Public/Vitis_HLS/gmskModem/convEncoder/convEncoder.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=convEncoder_tb.cpp' from hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file 'C:/Users/Public/Vitis_HLS/gmskModem/convEncoder/convEncoder_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=convEncoder' from hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=.%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xcku5p-ffvb676-2-e' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xcku5p-ffvb676-2-e'
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying config ini 'sim.ldflags=-Wno-macro-redefined' from hls_config.cfg(11)
+INFO: [HLS 200-2176] Writing Vitis IDE component file C:/Users/Public/Vitis_HLS/gmskModem/convEncoder/convEncoder/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../convEncoder_tb.cpp in debug mode
+   Compiling ../../../../convEncoder.cpp in debug mode
+   Generating csim.exe
+In file included from ../../../../convEncoder_tb.cpp:3:
+In file included from D:/Xilinx/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/Xilinx/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/Xilinx/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1867:1: warning: '__gmpz_abs' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_abs (mpz_ptr __gmp_w, mpz_srcptr __gmp_u)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:688:17: note: expanded from macro 'mpz_abs'
+#define mpz_abs __gmpz_abs
+                ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1893:1: warning: '__gmpz_fits_uint_p' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_fits_uint_p (mpz_srcptr __gmp_z) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:861:25: note: expanded from macro 'mpz_fits_uint_p'
+#define mpz_fits_uint_p __gmpz_fits_uint_p
+                        ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1904:1: warning: '__gmpz_fits_ui_p' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_fits_ui_p (mpz_srcptr __gmp_z) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:866:23: note: expanded from macro 'mpz_fits_ui_p'
+#define mpz_fits_ui_p __gmpz_fits_ui_p
+                      ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1915:1: warning: '__gmpz_fits_ulong_p' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_fits_ulong_p (mpz_srcptr __gmp_z) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:871:26: note: expanded from macro 'mpz_fits_ulong_p'
+#define mpz_fits_ulong_p __gmpz_fits_ulong_p
+                         ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1926:1: warning: '__gmpz_fits_ushort_p' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_fits_ushort_p (mpz_srcptr __gmp_z) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:876:27: note: expanded from macro 'mpz_fits_ushort_p'
+#define mpz_fits_ushort_p __gmpz_fits_ushort_p
+                          ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1937:1: warning: '__gmpz_get_ui' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_get_ui (mpz_srcptr __gmp_z) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:902:20: note: expanded from macro 'mpz_get_ui'
+#define mpz_get_ui __gmpz_get_ui
+                   ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1965:1: warning: '__gmpz_getlimbn' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_getlimbn (mpz_srcptr __gmp_z, mp_size_t __gmp_n) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:907:22: note: expanded from macro 'mpz_getlimbn'
+#define mpz_getlimbn __gmpz_getlimbn
+                     ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1976:1: warning: '__gmpz_neg' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_neg (mpz_ptr __gmp_w, mpz_srcptr __gmp_u)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1015:17: note: expanded from macro 'mpz_neg'
+#define mpz_neg __gmpz_neg
+                ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1989:1: warning: '__gmpz_perfect_square_p' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_perfect_square_p (mpz_srcptr __gmp_a)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1040:30: note: expanded from macro 'mpz_perfect_square_p'
+#define mpz_perfect_square_p __gmpz_perfect_square_p
+                             ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2007:1: warning: '__gmpz_popcount' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_popcount (mpz_srcptr __gmp_u) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1045:22: note: expanded from macro 'mpz_popcount'
+#define mpz_popcount __gmpz_popcount
+                     ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2025:1: warning: '__gmpz_set_q' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_set_q (mpz_ptr __gmp_w, mpq_srcptr __gmp_u)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1102:19: note: expanded from macro 'mpz_set_q'
+#define mpz_set_q __gmpz_set_q
+                  ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2036:1: warning: '__gmpz_size' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_size (mpz_srcptr __gmp_z) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1121:18: note: expanded from macro 'mpz_size'
+#define mpz_size __gmpz_size
+                 ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2047:1: warning: '__gmpq_abs' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpq_abs (mpq_ptr __gmp_w, mpq_srcptr __gmp_u)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1229:17: note: expanded from macro 'mpq_abs'
+#define mpq_abs __gmpq_abs
+                ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2057:1: warning: '__gmpq_neg' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpq_neg (mpq_ptr __gmp_w, mpq_srcptr __gmp_u)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1296:17: note: expanded from macro 'mpq_neg'
+#define mpq_neg __gmpq_neg
+                ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2301:1: warning: '__gmpn_add' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpn_add (mp_ptr __gmp_wp, mp_srcptr __gmp_xp, mp_size_t __gmp_xsize, mp_srcptr __gmp_yp, mp_size_t __gmp_ysize)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1560:17: note: expanded from macro 'mpn_add'
+#define mpn_add __MPN(add)
+                ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:320:18: note: expanded from macro '__MPN'
+#define __MPN(x) __gmpn_##x
+                 ^
+<scratch space>:78:1: note: expanded from here
+__gmpn_add
+^
+In file included from ../../../../convEncoder_tb.cpp:3:
+In file included from D:/Xilinx/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/Xilinx/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/Xilinx/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2314:1: warning: '__gmpn_add_1' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpn_add_1 (mp_ptr __gmp_dst, mp_srcptr __gmp_src, mp_size_t __gmp_size, mp_limb_t __gmp_n) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1565:19: note: expanded from macro 'mpn_add_1'
+#define mpn_add_1 __MPN(add_1)
+                  ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:320:18: note: expanded from macro '__MPN'
+#define __MPN(x) __gmpn_##x
+                 ^
+<scratch space>:80:1: note: expanded from here
+__gmpn_add_1
+^
+In file included from ../../../../convEncoder_tb.cpp:3:
+In file included from D:/Xilinx/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/Xilinx/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/Xilinx/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2327:1: warning: '__gmpn_cmp' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpn_cmp (mp_srcptr __gmp_xp, mp_srcptr __gmp_yp, mp_size_t __gmp_size) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1591:17: note: expanded from macro 'mpn_cmp'
+#define mpn_cmp __MPN(cmp)
+                ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:320:18: note: expanded from macro '__MPN'
+#define __MPN(x) __gmpn_##x
+                 ^
+<scratch space>:81:1: note: expanded from here
+__gmpn_cmp
+^
+In file included from ../../../../convEncoder_tb.cpp:3:
+In file included from D:/Xilinx/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/Xilinx/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/Xilinx/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2340:1: warning: '__gmpn_sub' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpn_sub (mp_ptr __gmp_wp, mp_srcptr __gmp_xp, mp_size_t __gmp_xsize, mp_srcptr __gmp_yp, mp_size_t __gmp_ysize)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1796:17: note: expanded from macro 'mpn_sub'
+#define mpn_sub __MPN(sub)
+                ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:320:18: note: expanded from macro '__MPN'
+#define __MPN(x) __gmpn_##x
+                 ^
+<scratch space>:82:1: note: expanded from here
+__gmpn_sub
+^
+In file included from ../../../../convEncoder_tb.cpp:3:
+In file included from D:/Xilinx/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/Xilinx/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/Xilinx/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2353:1: warning: '__gmpn_sub_1' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpn_sub_1 (mp_ptr __gmp_dst, mp_srcptr __gmp_src, mp_size_t __gmp_size, mp_limb_t __gmp_n) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1801:19: note: expanded from macro 'mpn_sub_1'
+#define mpn_sub_1 __MPN(sub_1)
+                  ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:320:18: note: expanded from macro '__MPN'
+#define __MPN(x) __gmpn_##x
+                 ^
+<scratch space>:84:1: note: expanded from here
+__gmpn_sub_1
+^
+19 warnings generated.
+In file included from ../../../../convEncoder.cpp:2:
+In file included from D:/Xilinx/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/Xilinx/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/Xilinx/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1867:1: warning: '__gmpz_abs' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_abs (mpz_ptr __gmp_w, mpz_srcptr __gmp_u)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:688:17: note: expanded from macro 'mpz_abs'
+#define mpz_abs __gmpz_abs
+                ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1893:1: warning: '__gmpz_fits_uint_p' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_fits_uint_p (mpz_srcptr __gmp_z) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:861:25: note: expanded from macro 'mpz_fits_uint_p'
+#define mpz_fits_uint_p __gmpz_fits_uint_p
+                        ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1904:1: warning: '__gmpz_fits_ui_p' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_fits_ui_p (mpz_srcptr __gmp_z) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:866:23: note: expanded from macro 'mpz_fits_ui_p'
+#define mpz_fits_ui_p __gmpz_fits_ui_p
+                      ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1915:1: warning: '__gmpz_fits_ulong_p' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_fits_ulong_p (mpz_srcptr __gmp_z) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:871:26: note: expanded from macro 'mpz_fits_ulong_p'
+#define mpz_fits_ulong_p __gmpz_fits_ulong_p
+                         ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1926:1: warning: '__gmpz_fits_ushort_p' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_fits_ushort_p (mpz_srcptr __gmp_z) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:876:27: note: expanded from macro 'mpz_fits_ushort_p'
+#define mpz_fits_ushort_p __gmpz_fits_ushort_p
+                          ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1937:1: warning: '__gmpz_get_ui' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_get_ui (mpz_srcptr __gmp_z) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:902:20: note: expanded from macro 'mpz_get_ui'
+#define mpz_get_ui __gmpz_get_ui
+                   ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1965:1: warning: '__gmpz_getlimbn' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_getlimbn (mpz_srcptr __gmp_z, mp_size_t __gmp_n) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:907:22: note: expanded from macro 'mpz_getlimbn'
+#define mpz_getlimbn __gmpz_getlimbn
+                     ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1976:1: warning: '__gmpz_neg' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_neg (mpz_ptr __gmp_w, mpz_srcptr __gmp_u)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1015:17: note: expanded from macro 'mpz_neg'
+#define mpz_neg __gmpz_neg
+                ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1989:1: warning: '__gmpz_perfect_square_p' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_perfect_square_p (mpz_srcptr __gmp_a)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1040:30: note: expanded from macro 'mpz_perfect_square_p'
+#define mpz_perfect_square_p __gmpz_perfect_square_p
+                             ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2007:1: warning: '__gmpz_popcount' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_popcount (mpz_srcptr __gmp_u) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1045:22: note: expanded from macro 'mpz_popcount'
+#define mpz_popcount __gmpz_popcount
+                     ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2025:1: warning: '__gmpz_set_q' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_set_q (mpz_ptr __gmp_w, mpq_srcptr __gmp_u)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1102:19: note: expanded from macro 'mpz_set_q'
+#define mpz_set_q __gmpz_set_q
+                  ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2036:1: warning: '__gmpz_size' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpz_size (mpz_srcptr __gmp_z) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1121:18: note: expanded from macro 'mpz_size'
+#define mpz_size __gmpz_size
+                 ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2047:1: warning: '__gmpq_abs' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpq_abs (mpq_ptr __gmp_w, mpq_srcptr __gmp_u)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1229:17: note: expanded from macro 'mpq_abs'
+#define mpq_abs __gmpq_abs
+                ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2057:1: warning: '__gmpq_neg' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpq_neg (mpq_ptr __gmp_w, mpq_srcptr __gmp_u)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1296:17: note: expanded from macro 'mpq_neg'
+#define mpq_neg __gmpq_neg
+                ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2301:1: warning: '__gmpn_add' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpn_add (mp_ptr __gmp_wp, mp_srcptr __gmp_xp, mp_size_t __gmp_xsize, mp_srcptr __gmp_yp, mp_size_t __gmp_ysize)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1560:17: note: expanded from macro 'mpn_add'
+#define mpn_add __MPN(add)
+                ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:320:18: note: expanded from macro '__MPN'
+#define __MPN(x) __gmpn_##x
+                 ^
+<scratch space>:80:1: note: expanded from here
+__gmpn_add
+^
+In file included from ../../../../convEncoder.cpp:2:
+In file included from D:/Xilinx/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/Xilinx/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/Xilinx/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2314:1: warning: '__gmpn_add_1' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpn_add_1 (mp_ptr __gmp_dst, mp_srcptr __gmp_src, mp_size_t __gmp_size, mp_limb_t __gmp_n) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1565:19: note: expanded from macro 'mpn_add_1'
+#define mpn_add_1 __MPN(add_1)
+                  ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:320:18: note: expanded from macro '__MPN'
+#define __MPN(x) __gmpn_##x
+                 ^
+<scratch space>:82:1: note: expanded from here
+__gmpn_add_1
+^
+In file included from ../../../../convEncoder.cpp:2:
+In file included from D:/Xilinx/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/Xilinx/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/Xilinx/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2327:1: warning: '__gmpn_cmp' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpn_cmp (mp_srcptr __gmp_xp, mp_srcptr __gmp_yp, mp_size_t __gmp_size) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1591:17: note: expanded from macro 'mpn_cmp'
+#define mpn_cmp __MPN(cmp)
+                ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:320:18: note: expanded from macro '__MPN'
+#define __MPN(x) __gmpn_##x
+                 ^
+<scratch space>:83:1: note: expanded from here
+__gmpn_cmp
+^
+In file included from ../../../../convEncoder.cpp:2:
+In file included from D:/Xilinx/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/Xilinx/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/Xilinx/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2340:1: warning: '__gmpn_sub' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpn_sub (mp_ptr __gmp_wp, mp_srcptr __gmp_xp, mp_size_t __gmp_xsize, mp_srcptr __gmp_yp, mp_size_t __gmp_ysize)
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1796:17: note: expanded from macro 'mpn_sub'
+#define mpn_sub __MPN(sub)
+                ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:320:18: note: expanded from macro '__MPN'
+#define __MPN(x) __gmpn_##x
+                 ^
+<scratch space>:84:1: note: expanded from here
+__gmpn_sub
+^
+In file included from ../../../../convEncoder.cpp:2:
+In file included from D:/Xilinx/2025.2/Vitis/include\ap_int.h:10:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_common.h:668:
+In file included from D:/Xilinx/2025.2/Vitis/include\etc/ap_private.h:68:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_half.h:26:
+In file included from D:/Xilinx/2025.2/Vitis/include/etc/hls_half_fpo.h:19:
+In file included from D:/Xilinx/2025.2/Vitis/include\hls_fpo.h:140:
+In file included from D:/Xilinx/2025.2/Vitis/include/floating_point_v7_1_bitacc_cmodel.h:150:
+D:/Xilinx/2025.2/Vitis/include\gmp.h:2353:1: warning: '__gmpn_sub_1' redeclared inline; 'dllimport' attribute ignored [-Wignored-attributes]
+mpn_sub_1 (mp_ptr __gmp_dst, mp_srcptr __gmp_src, mp_size_t __gmp_size, mp_limb_t __gmp_n) __GMP_NOTHROW
+^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:1801:19: note: expanded from macro 'mpn_sub_1'
+#define mpn_sub_1 __MPN(sub_1)
+                  ^
+D:/Xilinx/2025.2/Vitis/include\gmp.h:320:18: note: expanded from macro '__MPN'
+#define __MPN(x) __gmpn_##x
+                 ^
+<scratch space>:86:1: note: expanded from here
+__gmpn_sub_1
+^
+19 warnings generated.
+Input bits: 1011001011
+Encoded bits: 11100010010111111001
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 10
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 8.43 seconds; peak allocated memory: 156.543 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 12s

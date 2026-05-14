@@ -1,0 +1,111 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2025.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>1.203</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>1.203</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>1.203</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>8.797</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>8.797</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>8.797</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>8.797</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>0</BRAM>
+    <CLB>0</CLB>
+    <DSP>0</DSP>
+    <FF>156</FF>
+    <LATCH>0</LATCH>
+    <LUT>135</LUT>
+    <SRL>0</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>960</BRAM>
+    <CLB>0</CLB>
+    <DSP>1824</DSP>
+    <FF>433920</FF>
+    <LUT>216960</LUT>
+    <URAM>64</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="convEncoder_Seq" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="1">grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115</SubModules>
+    <Resources FF="156" LUT="135" LogicLUT="135"/>
+    <LocalResources FF="77" LUT="5" LogicLUT="5"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115" DEPTH="1" FILE_NAME="convEncoder_Seq.v" ORIG_REF_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="79" LUT="130" LogicLUT="130"/>
+    <LocalResources FF="77" LUT="117" LogicLUT="117"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" ORIG_REF_NAME="convEncoder_Seq_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="1.184" DATAPATH_LOGIC_DELAY="0.403" DATAPATH_NET_DELAY="0.781" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58_reg[0]/D" LOGIC_LEVELS="4" MAX_FANOUT="32" SLACK="8.797" STARTPOINT_PIN="bd_0_i/hls_inst/inst/in_word_data_reg_178_reg[10]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/in_word_data_reg_178_reg[10]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="convEncoder_Seq.v" LINE_NUMBER="114"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/empty_fu_66[0]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/empty_fu_66[0]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58[62]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58[0]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="117"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.184" DATAPATH_LOGIC_DELAY="0.403" DATAPATH_NET_DELAY="0.781" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58_reg[10]/D" LOGIC_LEVELS="4" MAX_FANOUT="32" SLACK="8.797" STARTPOINT_PIN="bd_0_i/hls_inst/inst/in_word_data_reg_178_reg[10]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/in_word_data_reg_178_reg[10]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="convEncoder_Seq.v" LINE_NUMBER="114"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/empty_fu_66[0]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/empty_fu_66[0]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58[62]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58[10]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58_reg[10]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="117"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.184" DATAPATH_LOGIC_DELAY="0.403" DATAPATH_NET_DELAY="0.781" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58_reg[11]/D" LOGIC_LEVELS="4" MAX_FANOUT="32" SLACK="8.797" STARTPOINT_PIN="bd_0_i/hls_inst/inst/in_word_data_reg_178_reg[10]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/in_word_data_reg_178_reg[10]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="convEncoder_Seq.v" LINE_NUMBER="114"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/empty_fu_66[0]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/empty_fu_66[0]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58[63]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58[11]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58_reg[11]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="117"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.184" DATAPATH_LOGIC_DELAY="0.403" DATAPATH_NET_DELAY="0.781" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58_reg[12]/D" LOGIC_LEVELS="4" MAX_FANOUT="32" SLACK="8.797" STARTPOINT_PIN="bd_0_i/hls_inst/inst/in_word_data_reg_178_reg[10]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/in_word_data_reg_178_reg[10]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="convEncoder_Seq.v" LINE_NUMBER="114"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/empty_fu_66[0]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/empty_fu_66[0]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58[62]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58[12]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58_reg[12]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="117"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.184" DATAPATH_LOGIC_DELAY="0.403" DATAPATH_NET_DELAY="0.781" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58_reg[13]/D" LOGIC_LEVELS="4" MAX_FANOUT="32" SLACK="8.797" STARTPOINT_PIN="bd_0_i/hls_inst/inst/in_word_data_reg_178_reg[10]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/in_word_data_reg_178_reg[10]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="convEncoder_Seq.v" LINE_NUMBER="114"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/empty_fu_66[0]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/empty_fu_66[0]_i_3" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58[63]_i_5" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58[13]_i_1" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="159"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1_fu_115/encoded_fu_58_reg[13]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="convEncoder_Seq_convEncoder_Seq_Pipeline_VITIS_LOOP_40_1.v" LINE_NUMBER="117"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/convEncoder_Seq_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/convEncoder_Seq_failfast_synth.rpt"/>
+  <ReportFile TYPE="power" PATH="verilog/report/convEncoder_Seq_power_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/convEncoder_Seq_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/convEncoder_Seq_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/convEncoder_Seq_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/convEncoder_Seq_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

@@ -1,0 +1,22 @@
+{
+  "0": {
+    "basicblocks": 8,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 7,
+    "file": "convEncoder_Seq.cpp",
+    "fileloc": 18,
+    "instructions": 235,
+    "loads": {
+      "G": 1,
+      "L": 10
+    },
+    "memory_accesses": 0,
+    "name": "convEncoder_Seq",
+    "stores": {
+      "G": 1,
+      "L": 16
+    },
+    "total_instructions": 247
+  }
+}

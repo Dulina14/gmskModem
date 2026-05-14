@@ -1,0 +1,157 @@
+<ENTRY>
+{
+ "thisFile": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\convEncoder.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "03/18/26 16:06:15",
+ "timestampMillis": "1773830175676",
+ "buildStep": {
+  "cmdId": "8f5c5136-5a87-41c1-bcc1-f45b7036e579",
+  "name": "vitis-run",
+  "logFile": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\logs\\convEncoder.steps.log",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --package --config D:\\Vitis_HLS\\gmskModem\\convEncoder\\hls_config.cfg --work_dir convEncoder ",
+  "args": [
+   "--mode",
+   "hls",
+   "--package",
+   "--config",
+   "D:\\Vitis_HLS\\gmskModem\\convEncoder\\hls_config.cfg",
+   "--work_dir",
+   "convEncoder"
+  ],
+  "iniFiles": [],
+  "cwd": "D:\\Vitis_HLS\\gmskModem\\convEncoder"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/18/26 16:06:15",
+ "timestampMillis": "1773830175676",
+ "status": {
+  "cmdId": "8f5c5136-5a87-41c1-bcc1-f45b7036e579",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "03/18/26 16:06:19",
+ "timestampMillis": "1773830179329",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "convEncoder_Seq",
+     "file": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\convEncoder_Seq.zip",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder.cpp",
+     "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder_Seq.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "03/18/26 16:06:19",
+ "timestampMillis": "1773830179330",
+ "buildStep": {
+  "cmdId": "8b4afce2-a639-4d04-954d-10eca1a525b0",
+  "name": "",
+  "logFile": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "D:\\Vitis_HLS\\gmskModem\\convEncoder"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/18/26 16:06:19",
+ "timestampMillis": "1773830179330",
+ "status": {
+  "cmdId": "8b4afce2-a639-4d04-954d-10eca1a525b0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/18/26 16:06:31",
+ "timestampMillis": "1773830191568",
+ "status": {
+  "cmdId": "8b4afce2-a639-4d04-954d-10eca1a525b0",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/18/26 16:06:31",
+ "timestampMillis": "1773830191668",
+ "status": {
+  "cmdId": "8f5c5136-5a87-41c1-bcc1-f45b7036e579",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:06:31",
+ "timestampMillis": "1773830191669",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:06:31",
+ "timestampMillis": "1773830191669",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

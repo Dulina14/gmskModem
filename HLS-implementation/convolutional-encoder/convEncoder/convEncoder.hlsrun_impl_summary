@@ -1,0 +1,269 @@
+<ENTRY>
+{
+ "thisFile": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\convEncoder.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "03/18/26 16:06:42",
+ "timestampMillis": "1773830202487",
+ "buildStep": {
+  "cmdId": "4362d071-15b3-4e84-b384-5afd1b2cfb97",
+  "name": "vitis-run",
+  "logFile": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\logs\\convEncoder.steps.log",
+  "commandLine": "C:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --impl --config D:\\Vitis_HLS\\gmskModem\\convEncoder\\hls_config.cfg --work_dir convEncoder ",
+  "args": [
+   "--mode",
+   "hls",
+   "--impl",
+   "--config",
+   "D:\\Vitis_HLS\\gmskModem\\convEncoder\\hls_config.cfg",
+   "--work_dir",
+   "convEncoder"
+  ],
+  "iniFiles": [],
+  "cwd": "D:\\Vitis_HLS\\gmskModem\\convEncoder"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/18/26 16:06:42",
+ "timestampMillis": "1773830202487",
+ "status": {
+  "cmdId": "4362d071-15b3-4e84-b384-5afd1b2cfb97",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "03/18/26 16:06:46",
+ "timestampMillis": "1773830206197",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IMPL",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "convEncoder_Seq",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder.cpp",
+     "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder_Seq.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "03/18/26 16:06:46",
+ "timestampMillis": "1773830206198",
+ "buildStep": {
+  "cmdId": "d21f85e6-35b6-46b6-941f-8c7f53a2d947",
+  "name": "",
+  "logFile": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "D:\\Vitis_HLS\\gmskModem\\convEncoder"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/18/26 16:06:46",
+ "timestampMillis": "1773830206198",
+ "status": {
+  "cmdId": "d21f85e6-35b6-46b6-941f-8c7f53a2d947",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:06:46",
+ "timestampMillis": "1773830206200",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls\\impl\\verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:06:46",
+ "timestampMillis": "1773830206200",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls\\impl\\report\\verilog\\export_syn.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:06:46",
+ "timestampMillis": "1773830206201",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls\\impl\\report\\verilog\\export_syn.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:06:46",
+ "timestampMillis": "1773830206201",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls\\impl\\verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:06:46",
+ "timestampMillis": "1773830206201",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls\\impl\\report\\verilog\\export_impl.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:06:46",
+ "timestampMillis": "1773830206202",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls\\impl\\report\\verilog\\export_impl.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:14:18",
+ "timestampMillis": "1773830658447",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:14:18",
+ "timestampMillis": "1773830658451",
+ "report": {
+  "path": "D:/Vitis_HLS\\gmskModem\\convEncoder\\convEncoder\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/18/26 16:14:18",
+ "timestampMillis": "1773830658452",
+ "status": {
+  "cmdId": "d21f85e6-35b6-46b6-941f-8c7f53a2d947",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/18/26 16:14:18",
+ "timestampMillis": "1773830658671",
+ "status": {
+  "cmdId": "4362d071-15b3-4e84-b384-5afd1b2cfb97",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:14:18",
+ "timestampMillis": "1773830658675",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/18/26 16:14:18",
+ "timestampMillis": "1773830658675",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

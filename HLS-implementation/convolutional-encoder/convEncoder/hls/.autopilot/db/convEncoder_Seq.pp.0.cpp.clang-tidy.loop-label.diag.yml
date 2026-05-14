@@ -1,0 +1,64 @@
+---
+MainSourceFile:  'D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/.autopilot/db/convEncoder_Seq.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_676_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      676
+      Replacements:
+        - FilePath:        'D:\Vitis_HLS\gmskModem\convEncoder\convEncoder\hls\.autopilot\db\convEncoder_Seq.pp.0.cpp'
+          Offset:          283975
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_676_1: '
+    Level:           Remark
+    BuildDirectory:  'D:\Vitis_HLS\gmskModem\convEncoder'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_690_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      690
+      Replacements:
+        - FilePath:        'D:\Vitis_HLS\gmskModem\convEncoder\convEncoder\hls\.autopilot\db\convEncoder_Seq.pp.0.cpp'
+          Offset:          284446
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_690_1: '
+    Level:           Remark
+    BuildDirectory:  'D:\Vitis_HLS\gmskModem\convEncoder'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_704_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      704
+      Replacements:
+        - FilePath:        'D:\Vitis_HLS\gmskModem\convEncoder\convEncoder\hls\.autopilot\db\convEncoder_Seq.pp.0.cpp'
+          Offset:          284918
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_704_1: '
+    Level:           Remark
+    BuildDirectory:  'D:\Vitis_HLS\gmskModem\convEncoder'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1251_1:  '
+      FilePath:        'C:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_fixed_base.h'
+      FileOffset:      1251
+      Replacements:
+        - FilePath:        'D:\Vitis_HLS\gmskModem\convEncoder\convEncoder\hls\.autopilot\db\convEncoder_Seq.pp.0.cpp'
+          Offset:          630321
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1251_1: '
+    Level:           Remark
+    BuildDirectory:  'D:\Vitis_HLS\gmskModem\convEncoder'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_40_1:  '
+      FilePath:        convEncoder_Seq.cpp
+      FileOffset:      40
+      Replacements:
+        - FilePath:        'D:\Vitis_HLS\gmskModem\convEncoder\convEncoder\hls\.autopilot\db\convEncoder_Seq.pp.0.cpp'
+          Offset:          2250830
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_40_1: '
+    Level:           Remark
+    BuildDirectory:  'D:\Vitis_HLS\gmskModem\convEncoder'
+...

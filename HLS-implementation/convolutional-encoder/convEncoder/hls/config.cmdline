@@ -1,0 +1,3 @@
+relativeroot=D:/Vitis_HLS/gmskModem/convEncoder
+original_argv=--mode hls --impl --config D:\Vitis_HLS\gmskModem\convEncoder\hls_config.cfg --work_dir convEncoder 
+

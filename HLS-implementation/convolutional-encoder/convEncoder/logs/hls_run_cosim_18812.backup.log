@@ -1,0 +1,609 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir D:/Vitis_HLS/gmskModem/convEncoder/convEncoder 
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component 'D:/Vitis_HLS/gmskModem/convEncoder/convEncoder'.
+INFO: [HLS 200-1611] Setting target device to 'xcku5p-ffvb676-2-e'
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+WARNING: [HLS 200-2001] file not found 'convEncoder.cpp' see [hls] from hls_config.cfg(10)
+INFO: [HLS 200-1465] Applying config ini 'syn.file=convEncoder.cpp' from hls_config.cfg(10)
+WARNING: [HLS 200-40] Cannot find design file 'convEncoder.cpp'
+INFO: [HLS 200-1465] Applying config ini 'syn.file=convEncoder_Seq.cpp' from hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file 'D:/Vitis_HLS/gmskModem/convEncoder/convEncoder_Seq.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=convEncoder_Seq_tb.cpp' from hls_config.cfg(12)
+INFO: [HLS 200-10] Adding test bench file 'D:/Vitis_HLS/gmskModem/convEncoder/convEncoder_Seq_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=convEncoder_Seq' from hls_config.cfg(8)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xcku5p-ffvb676-2-e' from hls_config.cfg(1)
+INFO: [HLS 200-1465] Applying config ini 'clock=10ns' from hls_config.cfg(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(5)
+INFO: [HLS 200-1465] Applying config ini 'sim.ldflags=-Wno-macro-redefined' from hls_config.cfg(9)
+INFO: [HLS 200-2176] Writing Vitis IDE component file D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/vitis-comp.json
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "C:/AMDDesignTools/2025.2/Vitis/win64/tools/clang-16/bin/clang++"
+   Compiling apatb_convEncoder_Seq.cpp
+   Compiling apatb_convEncoder_Seq_util.cpp
+   Compiling convEncoder_Seq.cpp_pre.cpp.tb.cpp
+   Compiling convEncoder_Seq_tb.cpp_pre.cpp.tb.cpp
+   Compiling apatb_convEncoder_Seq_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+========================================
+  Conv Encoder Testbench (K=7 [171 133])
+========================================
+
+[PASS] TC1: All-zero input
+  Word[0]  IN =0x00000000  OUT[lo]=0x00000000  OUT[hi]=0x00000000
+[PASS] TC2: All-ones input
+  Word[0]  IN =0xffffffff  OUT[lo]=0xfffff29b  OUT[hi]=0xffffffff
+[PASS] TC3: Impulse (bit 0 only)
+  Word[0]  IN =0x00000001  OUT[lo]=0x00003593  OUT[hi]=0x00000000
+[PASS] TC4: Single bit at MSB (bit 31)
+  Word[0]  IN =0x80000000  OUT[lo]=0x00000000  OUT[hi]=0xc0000000
+[PASS] TC5: Alternating bits 0xAAAAAAAA
+  Word[0]  IN =0xaaaaaaaa  OUT[lo]=0xcccccc21  OUT[hi]=0xcccccccc
+[PASS] TC6: Alternating bits 0x55555555
+  Word[0]  IN =0x55555555  OUT[lo]=0x33333e57  OUT[hi]=0x33333333
+[PASS] TC7: Known pattern 0xDEADBEEF
+  Word[0]  IN =0xdeadbeef  OUT[lo]=0xb730062f  OUT[hi]=0x18bf98ac
+[PASS] TC8: Multi-word state persistence (4 words)
+  Word[0]  IN =0x12345678  OUT[lo]=0xe8f66b47  OUT[hi]=0x1404a7c4
+  Word[1]  IN =0xabcdef01  OUT[lo]=0x059b38cf  OUT[hi]=0xf754371b
+  Word[2]  IN =0xdeadbeef  OUT[lo]=0xb7300b4b  OUT[hi]=0x18bf98ac
+  Word[3]  IN =0x00ff00ff  OUT[lo]=0x0d64ff1c  OUT[hi]=0x0d64f29b
+
+--- TC9: Walking ones (32 single-word tests) ---
+[PASS] TC9.0: Walking one at bit 0
+[PASS] TC9.1: Walking one at bit 1
+[PASS] TC9.2: Walking one at bit 2
+[PASS] TC9.3: Walking one at bit 3
+[PASS] TC9.4: Walking one at bit 4
+[PASS] TC9.5: Walking one at bit 5
+[PASS] TC9.6: Walking one at bit 6
+[PASS] TC9.7: Walking one at bit 7
+[PASS] TC9.8: Walking one at bit 8
+[PASS] TC9.9: Walking one at bit 9
+[PASS] TC9.10: Walking one at bit 10
+[PASS] TC9.11: Walking one at bit 11
+[PASS] TC9.12: Walking one at bit 12
+[PASS] TC9.13: Walking one at bit 13
+[PASS] TC9.14: Walking one at bit 14
+[PASS] TC9.15: Walking one at bit 15
+[PASS] TC9.16: Walking one at bit 16
+[PASS] TC9.17: Walking one at bit 17
+[PASS] TC9.18: Walking one at bit 18
+[PASS] TC9.19: Walking one at bit 19
+[PASS] TC9.20: Walking one at bit 20
+[PASS] TC9.21: Walking one at bit 21
+[PASS] TC9.22: Walking one at bit 22
+[PASS] TC9.23: Walking one at bit 23
+[PASS] TC9.24: Walking one at bit 24
+[PASS] TC9.25: Walking one at bit 25
+[PASS] TC9.26: Walking one at bit 26
+[PASS] TC9.27: Walking one at bit 27
+[PASS] TC9.28: Walking one at bit 28
+[PASS] TC9.29: Walking one at bit 29
+[PASS] TC9.30: Walking one at bit 30
+[PASS] TC9.31: Walking one at bit 31
+  All walking-one subtests passed.
+
+--- TC10: Pseudo-random patterns ---
+[PASS] TC10: 6-word pseudo-random
+  Word[0]  IN =0xc0ffee42  OUT[lo]=0x3ee39de1  OUT[hi]=0xbd64ffc7
+  Word[1]  IN =0x13370000  OUT[lo]=0x00000db2  OUT[hi]=0x2cf37f5b
+  Word[2]  IN =0xbaadf00d  OUT[lo]=0x9b0d8a7f  OUT[hi]=0x3bcf9b2e
+  Word[3]  IN =0x8badf00d  OUT[lo]=0x9b0d84af  OUT[hi]=0x28389b2e
+  Word[4]  IN =0xfacefeed  OUT[lo]=0xc730e874  OUT[hi]=0x48a3ec08
+  Word[5]  IN =0x0b00b135  OUT[lo]=0xd32f91e0  OUT[hi]=0xe6eb0ee6
+
+========================================
+  Results: 41 / 41 tests passed
+========================================
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 12
+INFO: [COSIM 212-333] Generating C post check test bench ...
+This_is_a_noneblocking_read_case
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+
+D:\Vitis_HLS\gmskModem\convEncoder\convEncoder\hls\sim\verilog>set PATH= 
+
+D:\Vitis_HLS\gmskModem\convEncoder\convEncoder\hls\sim\verilog>call C:/AMDDesignTools/2025.2/Vivado/bin/xelab xil_defaultlib.apatb_convEncoder_Seq_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj convEncoder_Seq.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_1_21 -L floating_point_v7_0_26 --lib "ieee_proposed=./ieee_proposed" -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./convEncoder_Seq_subsystem  -s convEncoder_Seq  
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2025.2/Vivado/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_convEncoder_Seq_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj convEncoder_Seq.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_21 -L floating_point_v7_0_26 --lib ieee_proposed=./ieee_proposed -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./convEncoder_Seq_subsystem -s convEncoder_Seq 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/sim/verilog/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/sim/verilog/convEncoder_Seq.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_convEncoder_Seq_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/sim/verilog/convEncoder_Seq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convEncoder_Seq
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/sim/verilog/convEncoder_Seq_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convEncoder_Seq_regslice_both
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/sim/verilog/file_agent/file_agent_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/sim/verilog/svr/svr_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/sim/verilog/svr/svr_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/sim/verilog/convEncoder_Seq_subsystem/convEncoder_Seq_subsystem_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/sim/verilog/svtb/misc_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vitis_HLS/gmskModem/convEncoder/convEncoder/hls/sim/verilog/svtb/sv_module_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv_module_top
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_sv_module_top_sv
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.svr_pkg
+Compiling package xil_defaultlib.file_agent_pkg
+Compiling package xil_defaultlib.convEncoder_Seq_subsystem_pkg
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.convEncoder_Seq_regslice_both(Da...
+Compiling module xil_defaultlib.convEncoder_Seq_regslice_both(Da...
+Compiling module xil_defaultlib.convEncoder_Seq_regslice_both(Da...
+Compiling module xil_defaultlib.convEncoder_Seq
+Compiling module xil_defaultlib.misc_interface_default
+Compiling module xil_defaultlib.svr_if(DATA_WIDTH=41)
+Compiling module xil_defaultlib.sv_module_top
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_convEncoder_Seq_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot convEncoder_Seq
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Mar 18 15:42:48 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/convEncoder_Seq/xsim_script.tcl
+# xsim {convEncoder_Seq} -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=convEncoder_Seq_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -autoloadwcfg -tclbatch {convEncoder_Seq.tcl}
+Time resolution is 1 ps
+source convEncoder_Seq.tcl
+## run all
+UVM_INFO C:/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO C:/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO C:/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+------------------------------------------------------------------------------------------------------------
+Name                                               Type                                Size  Value          
+------------------------------------------------------------------------------------------------------------
+uvm_test_top                                       convEncoder_Seq_test_lib            -     @349           
+  top_env                                          convEncoder_Seq_env                 -     @360           
+    convEncoder_Seq_virtual_sqr                    convEncoder_Seq_virtual_sequencer   -     @444           
+      rsp_export                                   uvm_analysis_export                 -     @453           
+      seq_item_export                              uvm_seq_item_pull_imp               -     @571           
+      arbitration_queue                            array                               0     -              
+      lock_queue                                   array                               0     -              
+      num_last_reqs                                integral                            32    'd1            
+      num_last_rsps                                integral                            32    'd1            
+    env_master_svr_s_axis                          uvm_env                             -     @379           
+      m_agt                                        uvm_agent                           -     @587           
+        drv                                        uvm_driver #(REQ,RSP)               -     @735           
+          rsp_port                                 uvm_analysis_port                   -     @754           
+          seq_item_port                            uvm_seq_item_pull_port              -     @744           
+        mon                                        uvm_monitor                         -     @764           
+          item_collect_port                        uvm_analysis_port                   -     @775           
+        sqr                                        uvm_sequencer                       -     @598           
+          rsp_export                               uvm_analysis_export                 -     @607           
+          seq_item_export                          uvm_seq_item_pull_imp               -     @725           
+          arbitration_queue                        array                               0     -              
+          lock_queue                               array                               0     -              
+          num_last_reqs                            integral                            32    'd1            
+          num_last_rsps                            integral                            32    'd1            
+    env_slave_svr_m_axis                           uvm_env                             -     @392           
+      s_agt                                        uvm_agent                           -     @793           
+        drv                                        uvm_driver #(REQ,RSP)               -     @941           
+          rsp_port                                 uvm_analysis_port                   -     @960           
+          seq_item_port                            uvm_seq_item_pull_port              -     @950           
+        mon                                        uvm_monitor                         -     @970           
+          item_collect_port                        uvm_analysis_port                   -     @981           
+        sqr                                        uvm_sequencer                       -     @804           
+          rsp_export                               uvm_analysis_export                 -     @813           
+          seq_item_export                          uvm_seq_item_pull_imp               -     @931           
+          arbitration_queue                        array                               0     -              
+          lock_queue                               array                               0     -              
+          num_last_reqs                            integral                            32    'd1            
+          num_last_rsps                            integral                            32    'd1            
+    refm                                           convEncoder_Seq_reference_model     -     @402           
+      trans_num_idx                                integral                            32    'h0            
+    subsys_mon                                     convEncoder_Seq_subsystem_monitor   -     @415           
+      scbd                                         convEncoder_Seq_scoreboard          -     @1003          
+        refm                                       convEncoder_Seq_reference_model     -     @402           
+          trans_num_idx                            integral                            32    'h0            
+        file_rd_TVOUT_transaction_size             <unknown>                           -     @1013          
+          TV_FILE                                  string                              0     ""             
+          fp                                       integral                            32    'hxxxxxxxx     
+          TV_FILE_num                              integral                            32    'h0            
+          HEX_read                                 integral                            32    'h0            
+          DEC_read                                 integral                            32    'h0            
+          is_binary                                integral                            32    'h0            
+          TV_FILE_COMPARE                          string                              0     ""             
+          fp_compare                               integral                            32    'hxxxxxxxx     
+        TVOUT_transaction_size_queue               da(integral)                        0     -              
+        file_wr_port_m_axis_m_axis_TDATA           <unknown>                           -     @1014          
+          TV_FILE                                  string                              0     ""             
+          fp                                       integral                            32    'hxxxxxxxx     
+          file_open                                integral                            32    'h0            
+          write_file_done                          integral                            32    'h0            
+          write_section_done                       integral                            32    'h0            
+          TRANSACTION_NUM                          integral                            32    'h0            
+          transaction_num_idx                      integral                            32    'h0            
+          TRANSACTION_DEPTH                        integral                            32    'h0            
+          TRANSACTION_DEPTH_queue                  da(integral)                        0     -              
+          TRANSACTION_DEPTH_queue_for_depth_check  da(integral)                        0     -              
+          transaction_depth_idx                    integral                            32    'h0            
+          ap_done_num_idx                          integral                            32    'h0            
+          is_binary                                integral                            32    'h0            
+        write_file_done_m_axis_m_axis_TDATA        integral                            32    'h0            
+        write_section_done_m_axis_m_axis_TDATA     integral                            32    'h0            
+        file_wr_port_m_axis_m_axis_TKEEP           <unknown>                           -     @1015          
+          TV_FILE                                  string                              0     ""             
+          fp                                       integral                            32    'hxxxxxxxx     
+          file_open                                integral                            32    'h0            
+          write_file_done                          integral                            32    'h0            
+          write_section_done                       integral                            32    'h0            
+          TRANSACTION_NUM                          integral                            32    'h0            
+          transaction_num_idx                      integral                            32    'h0            
+          TRANSACTION_DEPTH                        integral                            32    'h0            
+          TRANSACTION_DEPTH_queue                  da(integral)                        0     -              
+          TRANSACTION_DEPTH_queue_for_depth_check  da(integral)                        0     -              
+          transaction_depth_idx                    integral                            32    'h0            
+          ap_done_num_idx                          integral                            32    'h0            
+          is_binary                                integral                            32    'h0            
+        write_file_done_m_axis_m_axis_TKEEP        integral                            32    'h0            
+        write_section_done_m_axis_m_axis_TKEEP     integral                            32    'h0            
+        file_wr_port_m_axis_m_axis_TSTRB           <unknown>                           -     @1016          
+          TV_FILE                                  string                              0     ""             
+          fp                                       integral                            32    'hxxxxxxxx     
+          file_open                                integral                            32    'h0            
+          write_file_done                          integral                            32    'h0            
+          write_section_done                       integral                            32    'h0            
+          TRANSACTION_NUM                          integral                            32    'h0            
+          transaction_num_idx                      integral                            32    'h0            
+          TRANSACTION_DEPTH                        integral                            32    'h0            
+          TRANSACTION_DEPTH_queue                  da(integral)                        0     -              
+          TRANSACTION_DEPTH_queue_for_depth_check  da(integral)                        0     -              
+          transaction_depth_idx                    integral                            32    'h0            
+          ap_done_num_idx                          integral                            32    'h0            
+          is_binary                                integral                            32    'h0            
+        write_file_done_m_axis_m_axis_TSTRB        integral                            32    'h0            
+        write_section_done_m_axis_m_axis_TSTRB     integral                            32    'h0            
+        file_wr_port_m_axis_m_axis_TLAST           <unknown>                           -     @1017          
+          TV_FILE                                  string                              0     ""             
+          fp                                       integral                            32    'hxxxxxxxx     
+          file_open                                integral                            32    'h0            
+          write_file_done                          integral                            32    'h0            
+          write_section_done                       integral                            32    'h0            
+          TRANSACTION_NUM                          integral                            32    'h0            
+          transaction_num_idx                      integral                            32    'h0            
+          TRANSACTION_DEPTH                        integral                            32    'h0            
+          TRANSACTION_DEPTH_queue                  da(integral)                        0     -              
+          TRANSACTION_DEPTH_queue_for_depth_check  da(integral)                        0     -              
+          transaction_depth_idx                    integral                            32    'h0            
+          ap_done_num_idx                          integral                            32    'h0            
+          is_binary                                integral                            32    'h0            
+        write_file_done_m_axis_m_axis_TLAST        integral                            32    'h0            
+        write_section_done_m_axis_m_axis_TLAST     integral                            32    'h0            
+      svr_master_s_axis_imp                        uvm_analysis_imp_svr_master_s_axis  -     @424           
+      svr_slave_m_axis_imp                         uvm_analysis_imp_svr_slave_m_axis   -     @434           
+    env_master_svr_s_axis                          uvm_env                             -     @379           
+    env_slave_svr_m_axis                           uvm_env                             -     @392           
+    refm                                           convEncoder_Seq_reference_model     -     @402           
+    convEncoder_Seq_virtual_sqr                    convEncoder_Seq_virtual_sequencer   -     @444           
+    convEncoder_Seq_cfg                            convEncoder_Seq_config              -     @374           
+      port_s_axis_cfg                              svr_config                          -     @375           
+        svr_type                                   svr_inst_type                       32    SVR_MASTER     
+        prt_type                                   svr_protocol_type                   32    AXIS           
+        is_active                                  svr_active_passive_enum             1     SVR_ACTIVE     
+        reset_level                                svr_reset_level_enum                1     RESET_LEVEL_LOW
+        spec_cfg                                   svr_spec_cfg_enum                   32    NORMAL         
+        clatency                                   svr_latency                         -     @376           
+          transfer_latency                         integral                            32    'h0            
+      port_m_axis_cfg                              svr_config                          -     @377           
+        svr_type                                   svr_inst_type                       32    SVR_SLAVE      
+        prt_type                                   svr_protocol_type                   32    AXIS           
+        is_active                                  svr_active_passive_enum             1     SVR_ACTIVE     
+        reset_level                                svr_reset_level_enum                1     RESET_LEVEL_LOW
+        spec_cfg                                   svr_spec_cfg_enum                   32    NORMAL         
+        clatency                                   svr_latency                         -     @378           
+          transfer_latency                         integral                            32    'h0            
+      check_ena                                    integral                            32    'h0            
+      cover_ena                                    integral                            32    'h0            
+------------------------------------------------------------------------------------------------------------
+
+UVM_INFO C:/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 147 [0.00%] @ "125000"
+// RTL Simulation : 1 / 147 [33.33%] @ "195000"
+// RTL Simulation : 2 / 147 [33.33%] @ "215000"
+// RTL Simulation : 3 / 147 [33.33%] @ "235000"
+// RTL Simulation : 4 / 147 [33.33%] @ "255000"
+// RTL Simulation : 5 / 147 [33.33%] @ "275000"
+// RTL Simulation : 6 / 147 [33.33%] @ "295000"
+// RTL Simulation : 7 / 147 [33.33%] @ "315000"
+// RTL Simulation : 8 / 147 [33.33%] @ "335000"
+// RTL Simulation : 9 / 147 [33.33%] @ "355000"
+// RTL Simulation : 10 / 147 [33.33%] @ "375000"
+// RTL Simulation : 11 / 147 [33.33%] @ "395000"
+// RTL Simulation : 12 / 147 [33.33%] @ "415000"
+// RTL Simulation : 13 / 147 [33.33%] @ "435000"
+// RTL Simulation : 14 / 147 [33.33%] @ "455000"
+// RTL Simulation : 15 / 147 [33.33%] @ "475000"
+// RTL Simulation : 16 / 147 [33.33%] @ "495000"
+// RTL Simulation : 17 / 147 [33.33%] @ "515000"
+// RTL Simulation : 18 / 147 [33.33%] @ "535000"
+// RTL Simulation : 19 / 147 [33.33%] @ "555000"
+// RTL Simulation : 20 / 147 [33.33%] @ "575000"
+// RTL Simulation : 21 / 147 [33.33%] @ "595000"
+// RTL Simulation : 22 / 147 [33.33%] @ "615000"
+// RTL Simulation : 23 / 147 [33.33%] @ "635000"
+// RTL Simulation : 24 / 147 [33.33%] @ "655000"
+// RTL Simulation : 25 / 147 [33.33%] @ "675000"
+// RTL Simulation : 26 / 147 [33.33%] @ "695000"
+// RTL Simulation : 27 / 147 [33.33%] @ "715000"
+// RTL Simulation : 28 / 147 [33.33%] @ "735000"
+// RTL Simulation : 29 / 147 [33.33%] @ "755000"
+// RTL Simulation : 30 / 147 [33.33%] @ "775000"
+// RTL Simulation : 31 / 147 [33.33%] @ "795000"
+// RTL Simulation : 32 / 147 [33.33%] @ "815000"
+// RTL Simulation : 33 / 147 [33.33%] @ "835000"
+// RTL Simulation : 34 / 147 [33.33%] @ "855000"
+// RTL Simulation : 35 / 147 [33.33%] @ "875000"
+// RTL Simulation : 36 / 147 [33.33%] @ "895000"
+// RTL Simulation : 37 / 147 [33.33%] @ "915000"
+// RTL Simulation : 38 / 147 [33.33%] @ "935000"
+// RTL Simulation : 39 / 147 [33.33%] @ "955000"
+// RTL Simulation : 40 / 147 [33.33%] @ "975000"
+// RTL Simulation : 41 / 147 [33.33%] @ "995000"
+// RTL Simulation : 42 / 147 [33.33%] @ "1015000"
+// RTL Simulation : 43 / 147 [33.33%] @ "1035000"
+// RTL Simulation : 44 / 147 [33.33%] @ "1055000"
+// RTL Simulation : 45 / 147 [33.33%] @ "1075000"
+// RTL Simulation : 46 / 147 [33.33%] @ "1095000"
+// RTL Simulation : 47 / 147 [33.33%] @ "1115000"
+// RTL Simulation : 48 / 147 [33.33%] @ "1135000"
+// RTL Simulation : 49 / 147 [33.33%] @ "1155000"
+// RTL Simulation : 50 / 147 [33.33%] @ "1175000"
+// RTL Simulation : 51 / 147 [33.33%] @ "1195000"
+// RTL Simulation : 52 / 147 [33.33%] @ "1215000"
+// RTL Simulation : 53 / 147 [33.33%] @ "1235000"
+// RTL Simulation : 54 / 147 [33.33%] @ "1255000"
+// RTL Simulation : 55 / 147 [33.33%] @ "1275000"
+// RTL Simulation : 56 / 147 [33.33%] @ "1295000"
+// RTL Simulation : 57 / 147 [33.33%] @ "1315000"
+// RTL Simulation : 58 / 147 [33.33%] @ "1335000"
+// RTL Simulation : 59 / 147 [33.33%] @ "1355000"
+// RTL Simulation : 60 / 147 [33.33%] @ "1375000"
+// RTL Simulation : 61 / 147 [33.33%] @ "1395000"
+// RTL Simulation : 62 / 147 [33.33%] @ "1415000"
+// RTL Simulation : 63 / 147 [33.33%] @ "1435000"
+// RTL Simulation : 64 / 147 [33.33%] @ "1455000"
+// RTL Simulation : 65 / 147 [33.33%] @ "1475000"
+// RTL Simulation : 66 / 147 [33.33%] @ "1495000"
+// RTL Simulation : 67 / 147 [33.33%] @ "1515000"
+// RTL Simulation : 68 / 147 [33.33%] @ "1535000"
+// RTL Simulation : 69 / 147 [33.33%] @ "1555000"
+// RTL Simulation : 70 / 147 [33.33%] @ "1575000"
+// RTL Simulation : 71 / 147 [33.33%] @ "1595000"
+// RTL Simulation : 72 / 147 [33.33%] @ "1615000"
+// RTL Simulation : 73 / 147 [33.33%] @ "1635000"
+// RTL Simulation : 74 / 147 [33.33%] @ "1655000"
+// RTL Simulation : 75 / 147 [33.33%] @ "1675000"
+// RTL Simulation : 76 / 147 [33.33%] @ "1695000"
+// RTL Simulation : 77 / 147 [33.33%] @ "1715000"
+// RTL Simulation : 78 / 147 [33.33%] @ "1735000"
+// RTL Simulation : 79 / 147 [33.33%] @ "1755000"
+// RTL Simulation : 80 / 147 [33.33%] @ "1775000"
+// RTL Simulation : 81 / 147 [33.33%] @ "1795000"
+// RTL Simulation : 82 / 147 [33.33%] @ "1815000"
+// RTL Simulation : 83 / 147 [33.33%] @ "1835000"
+// RTL Simulation : 84 / 147 [33.33%] @ "1855000"
+// RTL Simulation : 85 / 147 [33.33%] @ "1875000"
+// RTL Simulation : 86 / 147 [33.33%] @ "1895000"
+// RTL Simulation : 87 / 147 [33.33%] @ "1915000"
+// RTL Simulation : 88 / 147 [33.33%] @ "1935000"
+// RTL Simulation : 89 / 147 [33.33%] @ "1955000"
+// RTL Simulation : 90 / 147 [33.33%] @ "1975000"
+// RTL Simulation : 91 / 147 [33.33%] @ "1995000"
+// RTL Simulation : 92 / 147 [33.33%] @ "2015000"
+// RTL Simulation : 93 / 147 [33.33%] @ "2035000"
+// RTL Simulation : 94 / 147 [33.33%] @ "2055000"
+// RTL Simulation : 95 / 147 [33.33%] @ "2075000"
+// RTL Simulation : 96 / 147 [33.33%] @ "2095000"
+// RTL Simulation : 97 / 147 [33.33%] @ "2115000"
+// RTL Simulation : 98 / 147 [33.33%] @ "2135000"
+// RTL Simulation : 99 / 147 [33.33%] @ "2155000"
+// RTL Simulation : 100 / 147 [33.33%] @ "2175000"
+// RTL Simulation : 101 / 147 [33.33%] @ "2195000"
+// RTL Simulation : 102 / 147 [33.33%] @ "2215000"
+// RTL Simulation : 103 / 147 [33.33%] @ "2235000"
+// RTL Simulation : 104 / 147 [33.33%] @ "2255000"
+// RTL Simulation : 105 / 147 [33.33%] @ "2275000"
+// RTL Simulation : 106 / 147 [33.33%] @ "2295000"
+// RTL Simulation : 107 / 147 [33.33%] @ "2315000"
+// RTL Simulation : 108 / 147 [33.33%] @ "2335000"
+// RTL Simulation : 109 / 147 [33.33%] @ "2355000"
+// RTL Simulation : 110 / 147 [33.33%] @ "2375000"
+// RTL Simulation : 111 / 147 [33.33%] @ "2395000"
+// RTL Simulation : 112 / 147 [33.33%] @ "2415000"
+// RTL Simulation : 113 / 147 [33.33%] @ "2435000"
+// RTL Simulation : 114 / 147 [33.33%] @ "2455000"
+// RTL Simulation : 115 / 147 [33.33%] @ "2475000"
+// RTL Simulation : 116 / 147 [33.33%] @ "2495000"
+// RTL Simulation : 117 / 147 [33.33%] @ "2515000"
+// RTL Simulation : 118 / 147 [33.33%] @ "2535000"
+// RTL Simulation : 119 / 147 [33.33%] @ "2555000"
+// RTL Simulation : 120 / 147 [33.33%] @ "2575000"
+// RTL Simulation : 121 / 147 [33.33%] @ "2595000"
+// RTL Simulation : 122 / 147 [33.33%] @ "2615000"
+// RTL Simulation : 123 / 147 [33.33%] @ "2635000"
+// RTL Simulation : 124 / 147 [33.33%] @ "2655000"
+// RTL Simulation : 125 / 147 [33.33%] @ "2675000"
+// RTL Simulation : 126 / 147 [33.33%] @ "2695000"
+// RTL Simulation : 127 / 147 [33.33%] @ "2715000"
+// RTL Simulation : 128 / 147 [33.33%] @ "2735000"
+// RTL Simulation : 129 / 147 [33.33%] @ "2755000"
+// RTL Simulation : 130 / 147 [33.33%] @ "2775000"
+// RTL Simulation : 131 / 147 [33.33%] @ "2795000"
+// RTL Simulation : 132 / 147 [33.33%] @ "2815000"
+// RTL Simulation : 133 / 147 [33.33%] @ "2835000"
+// RTL Simulation : 134 / 147 [33.33%] @ "2855000"
+// RTL Simulation : 135 / 147 [33.33%] @ "2875000"
+// RTL Simulation : 136 / 147 [33.33%] @ "2895000"
+// RTL Simulation : 137 / 147 [33.33%] @ "2915000"
+// RTL Simulation : 138 / 147 [33.33%] @ "2935000"
+// RTL Simulation : 139 / 147 [33.33%] @ "2955000"
+// RTL Simulation : 140 / 147 [33.33%] @ "2975000"
+// RTL Simulation : 141 / 147 [33.33%] @ "2995000"
+// RTL Simulation : 142 / 147 [33.33%] @ "3015000"
+// RTL Simulation : 143 / 147 [33.33%] @ "3035000"
+// RTL Simulation : 144 / 147 [33.33%] @ "3055000"
+// RTL Simulation : 145 / 147 [33.33%] @ "3075000"
+// RTL Simulation : 146 / 147 [33.33%] @ "3095000"
+// RTL Simulation : 147 / 147 [100.00%] @ "3115000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 3185 ns : File "C:/AMDDesignTools/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Mar 18 15:42:52 2026...
+INFO: [COSIM 212-316] Starting C post checking ...
+========================================
+  Conv Encoder Testbench (K=7 [171 133])
+========================================
+
+[PASS] TC1: All-zero input
+  Word[0]  IN =0x00000000  OUT[lo]=0x00000000  OUT[hi]=0x00000000
+[FAIL] TC2: All-ones input — expected 2 output words, got 0
+[FAIL] TC3: Impulse (bit 0 only) — output word [0]  DUT=0xfffff29b  REF=0x000038f7
+[FAIL] TC3: Impulse (bit 0 only) — output word [1]  DUT=0xffffffff  REF=0x00000000
+[FAIL] TC4: Single bit at MSB (bit 31) — output word [0]  DUT=0x00003593  REF=0x00000000
+[FAIL] TC4: Single bit at MSB (bit 31) — output word [1]  DUT=0x00000000  REF=0xc0000000
+[FAIL] TC5: Alternating bits 0xAAAAAAAA — output word [0]  DUT=0x00000000  REF=0xcccccc21
+[FAIL] TC5: Alternating bits 0xAAAAAAAA — output word [1]  DUT=0xc0000000  REF=0xcccccccc
+[FAIL] TC6: Alternating bits 0x55555555 — output word [0]  DUT=0xcccccc21  REF=0x33333e57
+[FAIL] TC6: Alternating bits 0x55555555 — output word [1]  DUT=0xcccccccc  REF=0x33333333
+[FAIL] TC7: Known pattern 0xDEADBEEF — output word [0]  DUT=0x33333e57  REF=0xb730062f
+[FAIL] TC7: Known pattern 0xDEADBEEF — output word [1]  DUT=0x33333333  REF=0x18bf98ac
+[FAIL] TC8: Multi-word state persistence (4 words) — output word [0]  DUT=0xb730062f  REF=0xe8f66b47
+[FAIL] TC8: Multi-word state persistence (4 words) — output word [1]  DUT=0x18bf98ac  REF=0x1404a7c4
+[FAIL] TC8: Multi-word state persistence (4 words) — output word [2]  DUT=0xe8f66b47  REF=0x059b38cf
+[FAIL] TC8: Multi-word state persistence (4 words) — output word [3]  DUT=0x1404a7c4  REF=0xf754371b
+[FAIL] TC8: Multi-word state persistence (4 words) — output word [4]  DUT=0x059b38cf  REF=0xb7300b4b
+[FAIL] TC8: Multi-word state persistence (4 words) — output word [5]  DUT=0xf754371b  REF=0x18bf98ac
+[FAIL] TC8: Multi-word state persistence (4 words) — output word [6]  DUT=0xb7300b4b  REF=0x0d64ff1c
+[FAIL] TC8: Multi-word state persistence (4 words) — output word [7]  DUT=0x18bf98ac  REF=0x0d64f29b
+
+--- TC9: Walking ones (32 single-word tests) ---
+[FAIL] TC9.0: Walking one at bit 0 — output word [0]  DUT=0x0d64ff1c  REF=0x000038f7
+[FAIL] TC9.0: Walking one at bit 0 — output word [1]  DUT=0x0d64f29b  REF=0x00000000
+[FAIL] TC9.1: Walking one at bit 1 — output word [0]  DUT=0x000038f7  REF=0x0000e3dc
+[FAIL] TC9.2: Walking one at bit 2 — output word [0]  DUT=0x0000e3dc  REF=0x00038f70
+[FAIL] TC9.3: Walking one at bit 3 — output word [0]  DUT=0x00038f70  REF=0x000e3dc0
+[FAIL] TC9.4: Walking one at bit 4 — output word [0]  DUT=0x000e3dc0  REF=0x0038f700
+[FAIL] TC9.5: Walking one at bit 5 — output word [0]  DUT=0x0038f700  REF=0x00e3dc00
+[FAIL] TC9.6: Walking one at bit 6 — output word [0]  DUT=0x00e3dc00  REF=0x038f7000
+[FAIL] TC9.7: Walking one at bit 7 — output word [0]  DUT=0x038f7000  REF=0x0e3dc000
+[FAIL] TC9.8: Walking one at bit 8 — output word [0]  DUT=0x0e3dc000  REF=0x38f70000
+[FAIL] TC9.9: Walking one at bit 9 — output word [0]  DUT=0x38f70000  REF=0xe3dc0000
+[FAIL] TC9.10: Walking one at bit 10 — output word [0]  DUT=0xe3dc0000  REF=0x8f700000
+[FAIL] TC9.10: Walking one at bit 10 — output word [1]  DUT=0x00000000  REF=0x00000003
+[FAIL] TC9.11: Walking one at bit 11 — output word [0]  DUT=0x8f700000  REF=0x3dc00000
+[FAIL] TC9.11: Walking one at bit 11 — output word [1]  DUT=0x00000003  REF=0x0000000e
+[FAIL] TC9.12: Walking one at bit 12 — output word [0]  DUT=0x3dc00000  REF=0xf7000000
+[FAIL] TC9.12: Walking one at bit 12 — output word [1]  DUT=0x0000000e  REF=0x00000038
+[FAIL] TC9.13: Walking one at bit 13 — output word [0]  DUT=0xf7000000  REF=0xdc000000
+[FAIL] TC9.13: Walking one at bit 13 — output word [1]  DUT=0x00000038  REF=0x000000e3
+[FAIL] TC9.14: Walking one at bit 14 — output word [0]  DUT=0xdc000000  REF=0x70000000
+[FAIL] TC9.14: Walking one at bit 14 — output word [1]  DUT=0x000000e3  REF=0x0000038f
+[FAIL] TC9.15: Walking one at bit 15 — output word [0]  DUT=0x70000000  REF=0xc0000000
+[FAIL] TC9.15: Walking one at bit 15 — output word [1]  DUT=0x0000038f  REF=0x00000e3d
+[FAIL] TC9.16: Walking one at bit 16 — output word [0]  DUT=0xc0000000  REF=0x00000000
+[FAIL] TC9.16: Walking one at bit 16 — output word [1]  DUT=0x00000e3d  REF=0x000038f7
+[FAIL] TC9.17: Walking one at bit 17 — output word [1]  DUT=0x000038f7  REF=0x0000e3dc
+[FAIL] TC9.18: Walking one at bit 18 — output word [1]  DUT=0x0000e3dc  REF=0x00038f70
+[FAIL] TC9.19: Walking one at bit 19 — output word [1]  DUT=0x00038f70  REF=0x000e3dc0
+[FAIL] TC9.20: Walking one at bit 20 — output word [1]  DUT=0x000e3dc0  REF=0x0038f700
+[FAIL] TC9.21: Walking one at bit 21 — output word [1]  DUT=0x0038f700  REF=0x00e3dc00
+[FAIL] TC9.22: Walking one at bit 22 — output word [1]  DUT=0x00e3dc00  REF=0x038f7000
+[FAIL] TC9.23: Walking one at bit 23 — output word [1]  DUT=0x038f7000  REF=0x0e3dc000
+[FAIL] TC9.24: Walking one at bit 24 — output word [1]  DUT=0x0e3dc000  REF=0x38f70000
+[FAIL] TC9.25: Walking one at bit 25 — output word [1]  DUT=0x38f70000  REF=0xe3dc0000
+[FAIL] TC9.26: Walking one at bit 26 — output word [1]  DUT=0xe3dc0000  REF=0x8f700000
+[FAIL] TC9.27: Walking one at bit 27 — output word [0]  DUT=0x00000000  REF=0x00000003
+[FAIL] TC9.27: Walking one at bit 27 — output word [1]  DUT=0x8f700000  REF=0x3dc00000
+[FAIL] TC9.28: Walking one at bit 28 — output word [0]  DUT=0x00000003  REF=0x0000000e
+[FAIL] TC9.28: Walking one at bit 28 — output word [1]  DUT=0x3dc00000  REF=0xf7000000
+[FAIL] TC9.29: Walking one at bit 29 — output word [0]  DUT=0x0000000e  REF=0x00000038
+[FAIL] TC9.29: Walking one at bit 29 — output word [1]  DUT=0xf7000000  REF=0xdc000000
+[FAIL] TC9.30: Walking one at bit 30 — output word [0]  DUT=0x00000038  REF=0x000000e3
+[FAIL] TC9.30: Walking one at bit 30 — output word [1]  DUT=0xdc000000  REF=0x70000000
+[FAIL] TC9.31: Walking one at bit 31 — output word [0]  DUT=0x000000e3  REF=0x0000038f
+[FAIL] TC9.31: Walking one at bit 31 — output word [1]  DUT=0x70000000  REF=0xc0000000
+
+--- TC10: Pseudo-random patterns ---
+[FAIL] TC10: 6-word pseudo-random — output word [0]  DUT=0x0000038f  REF=0x3ee39de1
+[FAIL] TC10: 6-word pseudo-random — output word [1]  DUT=0xc0000000  REF=0xbd64ffc7
+[FAIL] TC10: 6-word pseudo-random — output word [2]  DUT=0x3ee39de1  REF=0x00000db2
+[FAIL] TC10: 6-word pseudo-random — output word [3]  DUT=0xbd64ffc7  REF=0x2cf37f5b
+[FAIL] TC10: 6-word pseudo-random — output word [4]  DUT=0x00000db2  REF=0x9b0d8a7f
+[FAIL] TC10: 6-word pseudo-random — output word [5]  DUT=0x2cf37f5b  REF=0x3bcf9b2e
+[FAIL] TC10: 6-word pseudo-random — output word [6]  DUT=0x9b0d8a7f  REF=0x9b0d84af
+[FAIL] TC10: 6-word pseudo-random — output word [7]  DUT=0x3bcf9b2e  REF=0x28389b2e
+[FAIL] TC10: 6-word pseudo-random — output word [8]  DUT=0x9b0d84af  REF=0xc730e874
+[FAIL] TC10: 6-word pseudo-random — output word [9]  DUT=0x28389b2e  REF=0x48a3ec08
+[FAIL] TC10: 6-word pseudo-random — output word [10]  DUT=0xc730e874  REF=0xd32f91e0
+[FAIL] TC10: 6-word pseudo-random — output word [11]  DUT=0x48a3ec08  REF=0xe6eb0ee6
+
+========================================
+  Results: 1 / 41 tests passed
+========================================
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 12
+ERROR: [COSIM 212-361] C TB post check failed, nonzero return value '1'.
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+ERROR: 
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 2 seconds. Total elapsed time: 75.819 seconds; peak allocated memory: 217.469 MB.
